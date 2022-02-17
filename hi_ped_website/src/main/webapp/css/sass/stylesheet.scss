@@ -1,0 +1,393 @@
+@import "compass", "compass/reset", "compass/css3/font-face", "media-queries", "compass/css3/user-interface", "compass/css3/border-radius", "compass/css3/transition";
+
+
+// -------------------------------------------------------------------------------------------------------------- MIXINS
+@mixin change-extra-large-screen {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin change-large-screen {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin change-medium-screen {
+  @media only screen and (min-width: 720px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin change-small-screen {
+  @media only screen and (min-width: 576px) and (max-width: 719px) {
+    @content;
+  }
+}
+@mixin change-extra-small-screen {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+// ---------------------------------------------------------------------------------------------------------------------
+$blue-color: #2cabee;
+$grey-color: #98a6a9;
+$red-color: #da4644;
+$max-height-lg: 520px;
+$max-height-md: 545px;
+$max-height-sm: 440px;
+
+%h1-style {
+  font-weight: bold;
+  font-size: 22px;
+}
+%error-style {
+  display: block !important;
+  color: $red-color;
+  font-size: 11px;
+}
+%h1-style {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 40px;
+  @include change-extra-small-screen {
+    font-size: 28px;
+    margin-top: 0;
+  }
+}
+%btn-primary-and-outline-style {
+  @include border-radius(20px);
+  margin-top: 15px;
+  font-size: 12px;
+  @include change-medium-screen {
+    font-size: 10px;
+  }
+}
+%btn-primary-style {
+  background-color: #2cabee;
+  border: 1px solid $blue-color;
+  padding: 7px 40px;
+  @include change-medium-screen {
+    padding: 6px 20px;
+  }
+  @include change-small-screen {
+    padding: 5px 15px;
+  }
+  @include change-extra-small-screen {
+    padding: 10px 40px;
+  }
+}
+%btn-otline-style {
+  border: 2px solid $blue-color;
+  color: $blue-color;
+  margin-left: 4px;
+  padding: 7px 43px;
+  @include change-medium-screen {
+    padding: 5px 15px;
+  }
+  @include change-small-screen {
+    padding: 6px 20px;
+  }
+  @include change-extra-small-screen {
+    padding: 10px 40px;
+  }
+  &:hover {
+    background-color: $blue-color;
+    color: #ffffff;
+  }
+}
+
+%form-control-style {
+  width: 280px;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+  margin-top: 10px;
+  @include change-extra-small-screen {
+    width: 385px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    padding: 12px 30px;
+  }
+}
+%form-check-style {
+  margin-top: 5px;
+  line-height: 1.5;
+  @include change-extra-small-screen {
+    margin-top: 10px;
+  }
+  .form-check-label, a {
+    font-size: 11px;
+    @include change-extra-small-screen {
+      font-size: 0.8rem;
+    }
+  }
+  .form-check-label {
+    color: $grey-color;
+    padding-left: 5px;
+  }
+}
+
+// --------------------------------------------------------------------------------------------------------------- ERROR
+.error {
+  display: none;
+}
+.was-validated-user {
+  #user-error {
+    @extend %error-style;
+    img {
+      width: 14px;
+    }
+  }
+}
+.was-validated-password {
+  #pass-error {
+    @extend %error-style;
+    img {
+      width: 14px;
+    }
+  }
+}
+// ---------------------------------------------------------------------------------------------------------------------
+body {
+  background-color: $blue-color;
+  font-family: Arial;
+}
+.container {
+  max-height: 620px;
+  @include change-large-screen {
+    max-height: $max-height-lg;
+  }
+  @include change-medium-screen {
+    max-height: $max-height-md;
+  }
+  @include change-small-screen {
+    max-height: $max-height-sm;
+  }
+  @include change-extra-small-screen {
+    max-height: 100%;
+  }
+  @include change-extra-small-screen {
+    margin-bottom: 50px;
+  }
+  background-color: #ffffff;
+  @include box-shadow(rgba(#000000, 0.4) 0 30px 100px);
+  @include border-radius(5px);
+  margin-top: 60px;
+  .bg_section_login,
+  .bg_section_signup {
+    max-height: 620px;
+    background-size: cover!important;
+    position: relative;
+    @include change-large-screen {
+      max-height: $max-height-lg;
+    }
+    @include change-medium-screen {
+      max-height: $max-height-md;
+    }
+    @include change-small-screen {
+      max-height: $max-height-sm;
+      display: block;
+    }
+    @include change-extra-small-screen {
+      display: none;
+    }
+    img {
+      width: 220px;
+      position: absolute;
+      top: 8%;
+      left: -10px;
+    }
+  }
+  .m_bg_section_login {
+    display: none;
+    @include change-extra-small-screen {
+      background: url("../images/bg_login_m.png") no-repeat;
+      display: block;
+      background-size: contain;
+      padding-left: 0px;
+      padding-bottom: 57%;
+      img {
+        width: 34%;
+        padding-top: 6%;
+      }
+    }
+  }
+  .m_bg_section_signup {
+    display: none;
+    @include change-extra-small-screen {
+      background: url("../images/bg_signup_m.png") no-repeat;
+      display: block;
+      background-size: contain;
+      padding-left: 0px;
+      padding-bottom: 57%;
+      img {
+        width: 34%;
+        padding-top: 6%;
+      }
+    }
+  }
+  .bg_section_login {
+    background: url("../images/bg_login_desk.png") no-repeat;
+  }
+  .bg_section_signup {
+    background: url("../images/bg_signup_desk.png") no-repeat;
+  }
+// ------------------------------------------------------------------------------------------------------ LOG IN SECTION
+  .login_section {
+    padding-top: 200px;
+    padding-bottom: 185px;
+    padding-left: 108px;
+    @include change-large-screen {
+      padding-top: 140px;
+      padding-bottom: 100px;
+    }
+    @include change-medium-screen {
+      padding-top: 130px;
+      padding-left: 40px;
+    }
+    @include change-small-screen {
+      padding-top: 100px;
+      padding-left: 16px;
+      padding-bottom: 80px;
+    }
+    @include change-extra-small-screen {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-left: 5%;
+    }
+  }
+  .login_section {
+    form {
+      padding-bottom: 100px;
+      @include change-extra-small-screen {
+        padding-bottom: 30px;
+      }
+        h1 {
+          @extend %h1-style;
+        }
+      .btn-primary,
+      .btn-outline-primary {
+        @extend %btn-primary-and-outline-style;
+        @include change-extra-small-screen {
+          font-size: 16px;
+          margin-top: 30%;
+        }
+      }
+      .btn-primary {
+        @extend %btn-primary-style;
+      }
+      .btn-outline-primary {
+        @extend %btn-otline-style;
+      }
+      .form-row {
+        margin-bottom: 0;
+        input {
+          @include input-placeholder {
+            color: $grey-color;
+          }
+        }
+        .form-control {
+          @extend %form-control-style;
+        }
+      }
+      .form-check {
+        @extend %form-check-style;
+        a {
+          margin-left: 80px;
+          color: $blue-color;
+          font-weight: bold;
+          @include change-medium-screen {
+            margin-left: 10%;
+          }
+          @include change-small-screen {
+            margin-left: 10%;
+          }
+          @include change-extra-small-screen {
+            margin-left: 25%;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+// ----------------------------------------------------------------------------------------------------- SIGN UP SECTION
+  .signup_section {
+    padding-top: 100px;
+    padding-bottom: 113px;
+    padding-left: 108px;
+    @include change-large-screen {
+      padding-top: 50px;
+    }
+    @include change-medium-screen {
+      padding-top: 50px;
+      padding-left: 50px;
+    }
+    @include change-small-screen {
+      padding-top: 5px;
+      padding-left: 20px;
+    }
+    @include change-extra-small-screen {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-left: 5%;
+    }
+  }
+  .signup_section {
+    form {
+      max-width: 278px;
+      @include change-extra-small-screen {
+        padding-bottom: 30px;
+        max-width: 100%;
+      }
+      h1 {
+        @extend %h1-style;
+      }
+      .btn-primary,
+      .btn-outline-primary {
+        @extend %btn-primary-and-outline-style;
+        @include change-extra-small-screen {
+          font-size: 16px;
+          margin-top: 5%;
+        }
+      }
+      .btn-primary {
+        @extend %btn-primary-style;
+      }
+      .btn-outline-primary {
+        @extend %btn-otline-style;
+      }
+      .form-row {
+        margin-bottom: 0;
+        input {
+          @include input-placeholder {
+            color: $grey-color;
+          }
+        }
+        .form-control {
+          @extend %form-control-style;
+        }
+      }
+      .form-check {
+        @extend %form-check-style;
+      }
+      .small_text {
+        padding-left: 20px;
+        margin-top: 10px;
+        color: $grey-color;
+        font-size: 11px;
+        line-height: 1.5em;
+        a {
+          color: $blue-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+// ---------------------------------------------------------------------------------------------------------------------
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  background-color: #fefacb;
+}
+.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+  border-color: #a2a2a2;
+}
