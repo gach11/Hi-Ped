@@ -33,10 +33,7 @@
               </div>
               <div class="form-row">
                 <input type="email" class="form-control" id="mail" placeholder="Email" required>
-              </div>
-              <div class="form-row">
-                <input type="email" class="form-control" id="re_mail" placeholder="Re-enter email" required>
-              </div>
+              </div>             
               <div class="form-row">
                 <input type="password" class="form-control" id="password" placeholder="Password" required>
               </div>
