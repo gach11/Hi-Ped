@@ -44,9 +44,9 @@
                 <input type="checkbox" class="form-check-input" id="login_check">
                 <label class="form-check-label" for="login_check">Recieve our weekly newsletter and other occasional updates</label>
               </div>
-              <a href="login.jsp" type="submit" class="btn btn-primary">LOG IN</button> </a>
-              <a href="#" type="submit" class="btn btn-outline-primary">SIGN UP</button> </a>        
-                          
+              <a href="index.html" class="btn btn-primary">BACK</a>
+              <a href="#" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
+                                                     
               <p id="privacyTerms" class="small_text">
                 By signing up, you agree to our <a href="#">terms of use</a>, <a href="#">privacy policy</a>, <a
                   href="#">and cookie policy</a>.

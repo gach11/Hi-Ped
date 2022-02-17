@@ -44,8 +44,8 @@
                 <label class="form-check-label" for="login_check">Stay signed in</label>
                 <a href="#">Forgot password?</a>
               </div>
-              <a href="#" type="submit" class="btn btn-primary">LOG IN</button> </a>
-              <a href="signup.jsp" type="submit" class="btn btn-outline-primary">SIGN UP</button> </a>  
+              <a href="#" type="submit" class="btn btn-primary">LOG IN</a>
+              <a href="signup.jsp" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
               <div class="form-check"><a href="index.html">BACK</a></div>                 
             </form>
           </div>
