@@ -25,47 +25,63 @@
             <form class="needs-validation" novalidate>
               <h1>Patient Forms</h1>
               
-              <div class="form-row">
-                <input type="text" class="form-control"  id="name" aria-describedby="emailHelp" placeholder="Fullname" required>
-              </div>
-              <div class="form-row">
-                <input type="text" class="form-control"  id="name" aria-describedby="emailHelp" placeholder="Contact Number" required>
-              </div>
-              <div class="form-row">
-                <input type="text" class="form-control"  id="name" aria-describedby="emailHelp" placeholder="Birthdate" required>
-              </div>       
-               	        
-               	                                                
-              <div class="form-row ">
-                <input type="text" class="form-control  w-25"  id="name" aria-describedby="emailHelp" placeholder="Age" required>
-              </div>
+			<div class="form-row">  
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  					<label class="form-check-label" for="inlineRadio1">Infant</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  					<label class="form-check-label" for="inlineRadio2">Children</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  					<label class="form-check-label" for="inlineRadio2">Adolescents</label>
+				</div>
+            </div>
               
-              
-              <div class="form-row">
-                <input type="text" class="form-control"  id="name" aria-describedby="emailHelp" placeholder="Address" required>
-              </div>
-				<div class="form-row">
-					
-   				 	<textarea class="form-control" id="name" rows="3" placeholder="Address" aria-describedby="emailHelp" required></textarea>
- 				</div>
-              <div class="form-row">
-                <input type="text" class="form-control" id="condition" placeholder="Condition" required>
-              </div> 
-                                                           
-              <div class="form-row">
-                <input type="text" class="form-control" id="password" placeholder="Password" required>
-              </div>
-              <div class="form-row">
-                <input type="text" class="form-control" id="re_password" placeholder="Re-enter password" required>
-              </div>
-                            
-              <a href="index.html" class="btn btn-primary">BACK</a>
-              <a href="#" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
-                                                     
-              <p id="privacyTerms" class="small_text">
-                By signing up, you agree to our <a href="#">terms of use</a>, <a href="#">privacy policy</a>, <a
-                  href="#">and cookie policy</a>.
-              </p>
+			<div class="form-row">
+				<input type="text" class="form-control"  id="fullname"  placeholder="Patient Name" required>
+			</div>
+            <div class="form-row">
+                <input type="text" class="form-control"  id="number"  placeholder="Contact Number" required>
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-control"  id="bod" placeholder="Birthdate" required>
+            </div>                     	                       	                                                
+		<div class="form-row">
+                <input type="text" class="form-control  w-25"  id="age"  placeholder="Age" required>                
+            <div class="form-check form-check-inline mx-auto">
+  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  				<label class="form-check-label" for="inlineRadio1">Male</label>
+			</div>
+			<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  				<label class="form-check-label" for="inlineRadio2">Female</label>
+			</div>         
+		</div>                                        
+            <div class="form-row">
+                <input type="text" class="form-control"  id="address"  placeholder="Address" required>
+            </div>            
+			<div class="form-row">								
+   				 <textarea placeholder="Condition" class="form-control" id="condition" rows="3"  aria-describedby="emailHelp" required></textarea>
+ 			</div>
+            <div class="form-row">
+                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control">
+            </div>            
+              <p id="privacyTerms" class="small_text"><a>
+                Guardian Info </a>
+              </p>              
+             <div class="form-row">
+				<input type="text" class="form-control"  id="guardian"  placeholder="Guardian's Fullname" required>
+			</div>
+			 <div class="form-row">
+				<input type="text" class="form-control"  id="relation"  placeholder="Relationship" required>
+			</div>              
+            <center>
+               <a href="index.html" class="btn btn-primary">Appoint</a>    
+              </center>
+             
             </form>
           </div>
       </div>

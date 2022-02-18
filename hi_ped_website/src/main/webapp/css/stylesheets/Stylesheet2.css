@@ -345,7 +345,7 @@ body {
 
 /* line 153, ../sass/stylesheet.scss */
 .container {
-  max-height: 920px;
+  max-height: 900px;
   background-color: #ffffff;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
@@ -388,7 +388,7 @@ body {
 /* line 174, ../sass/stylesheet.scss */
 .container .bg_section_login,
 .container .bg_section_signup {
-  max-height: 920px;
+  max-height: 900px;
   background-size: cover !important;
   position: relative;
 }
@@ -436,7 +436,7 @@ body {
 @media only screen and (max-width: 575px) {
   /* line 199, ../sass/stylesheet.scss */
   .container .m_bg_section_login {
-    background: url("../images/background") no-repeat;
+    background: url("../images/record.jpg") no-repeat;
     display: block;
     background-size: contain;
     padding-left: 0px;
@@ -455,7 +455,7 @@ body {
 @media only screen and (max-width: 575px) {
   /* line 213, ../sass/stylesheet.scss */
   .container .m_bg_section_signup {
-    background: url("../images/background3.jpg") no-repeat;
+    background: url("../images/record.jpg") no-repeat;
     display: block;
     background-size: contain;
     padding-left: 0px;
@@ -469,11 +469,11 @@ body {
 }
 /* line 227, ../sass/stylesheet.scss */
 .container .bg_section_login {
-  background: url("../images/background3.jpg") no-repeat;
+  background: url("../images/record.jpg") no-repeat;
 }
 /* line 230, ../sass/stylesheet.scss */
 .container .bg_section_signup {
-  background: url("../images/background2.jpg") no-repeat;
+  background: url("../images/record.jpg") no-repeat;
 }
 /* line 234, ../sass/stylesheet.scss */
 .container .login_section {
