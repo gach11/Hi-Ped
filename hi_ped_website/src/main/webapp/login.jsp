@@ -23,7 +23,7 @@
             <img src="css/images/logo_m.png" alt=""/>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 login_section">
-            <form class="needs-validation" novalidate>
+            <form action = "<%=request.getContextPath()%>/login" class="needs-validation" novalidate method="post">
               <h1>Log in</h1>
               <div class="error" id="user-error">
                 <img src="css/images/icon_error.svg" alt="error_icon"/>
@@ -34,17 +34,17 @@
                 Incorrect Password
               </div>
               <div class="form-row">
-                <input type="text" class="form-control"  id="username" aria-describedby="emailHelp" placeholder="Username" required>
+                <input type="text" class="form-control"  id="username" name = "username" aria-describedby="emailHelp" placeholder="Username" required>
               </div>
               <div class="form-row">
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="login_check">
                 <label class="form-check-label" for="login_check">Stay signed in</label>
                 <a href="#">Forgot password?</a>
               </div>
-              <a href="#" type="submit" class="btn btn-primary">LOG IN</a>
+              <button type="submit" class="btn btn-primary">LOG IN</button>
               <a href="signup.jsp" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
               <div class="form-check"><a href="index.html">BACK</a></div>                 
             </form>

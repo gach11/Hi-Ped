@@ -22,33 +22,36 @@
           <div class="col-12 m_bg_section_signup">          
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
-            <form class="needs-validation" novalidate>
+            <form action ="<%=request.getContextPath()%>/signup" class="needs-validation" novalidate method="post">
               <h1>Sign Up</h1>
               <div class="error" id="mail-error">
                 <img src="css/images/icon_error.svg" alt="error_icon"/>
                 Incorrect Username
               </div>
-              <div class="form-row">
-                <input type="text" class="form-control"  id="name" aria-describedby="emailHelp" placeholder="Name" required>
+                <div class="form-row">
+                <input type="text" class="form-control"  id="fullname" name="fullname" aria-describedby="emailHelp" placeholder="Full Name" required>
               </div>
               <div class="form-row">
-                <input type="email" class="form-control" id="mail" placeholder="Email" required>
+                <input type="email" class="form-control"  id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
               </div>             
               <div class="form-row">
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
               </div>
               <div class="form-row">
                 <input type="password" class="form-control" id="re_password" placeholder="Re-enter password" required>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="login_check">
-                <label class="form-check-label" for="login_check">Recieve our weekly newsletter and other occasional updates</label>
+                <label class="form-check-label" for="login_check">Receive our weekly newsletter and other occasional updates</label>
               </div>
               <a href="index.html" class="btn btn-primary">BACK</a>
-              <a href="#" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
+              <button type="submit" class="btn btn-outline-primary">SIGN UP</button>
                                                      
               <p id="privacyTerms" class="small_text">
-                By signing up, you agree to our <a href="#">terms of use</a>, <a href="#">privacy policy</a>, <a
+                By signing up, you agree to our <a href="#">terms of use</a>, <a href="#">Privacy Policy</a>, <a
                   href="#">and cookie policy</a>.
               </p>
             </form>
