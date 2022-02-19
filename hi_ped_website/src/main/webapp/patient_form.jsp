@@ -22,67 +22,69 @@
           <div class="col-12 m_bg_section_signup">          
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
-            <form class="needs-validation" novalidate>
+            <form action = "<%=request.getContextPath()%>/appoint" class="needs-validation" novalidate method="post">
               <h1>Patient Forms</h1>
               
 			<div class="form-row">  
 				<div class="form-check form-check-inline">
-  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  					<label class="form-check-label" for="inlineRadio1">Infant</label>
+  					<input class="form-check-input" type="radio" name="category"  id="cat1" value="Infant">
+  					<label class="form-check-label" for="cat1">Infant</label>
 				</div>
 				<div class="form-check form-check-inline">
-  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  					<label class="form-check-label" for="inlineRadio2">Children</label>
+  					<input class="form-check-input" type="radio" name="category" id="cat2" value="Children">
+  					<label class="form-check-label" for="cat2">Children</label>
 				</div>
 				<div class="form-check form-check-inline">
-  					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  					<label class="form-check-label" for="inlineRadio2">Adolescents</label>
+  					<input class="form-check-input" type="radio" name="category" id="cat3" value="Adolescents">
+  					<label class="form-check-label" for="cat3">Adolescents</label>
 				</div>
             </div>
               
 
 			<div class="form-row">
-				<input type="text" class="form-control"  id="fullname"  placeholder="Patient Name" required>
+				<input type="text" class="form-control"  id="patientname" name="name"  placeholder="Patient Name" required>
 			</div>
             <div class="form-row">
-                <input type="text" class="form-control"  id="number"  placeholder="Contact Number" required>
+                <input type="text" class="form-control"  id="number" name="cnumber"  placeholder="Contact Number" required>
             </div>
             <div class="form-row">
-                <input type="text" class="form-control"  id="bod" placeholder="Birthdate" required>
+                <input type="date" class="form-control"  id="bod" name="bod" placeholder="Birthdate">
             </div>                     	                       	                                                
 		<div class="form-row">
-                <input type="text" class="form-control  w-25"  id="age"  placeholder="Age" required>                
+                <input type="text" class="form-control  w-25"  id="age" name="age"  placeholder="Age" required>    
+                            
             <div class="form-check form-check-inline mx-auto">
-  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  				<label class="form-check-label" for="inlineRadio1">Male</label>
+  				<input class="form-check-input" type="radio" name="gender" id="gender1" value="Male">
+  				<label class="form-check-label" for="gender1">Male</label>
 			</div>
 			<div class="form-check form-check-inline">
-  				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  				<label class="form-check-label" for="inlineRadio2">Female</label>
+  				<input class="form-check-input" type="radio" name="gender" id="gender2" value="Female">
+  				<label class="form-check-label" for="gender2">Female</label>
 			</div>         
 		</div>                                        
             <div class="form-row">
-                <input type="text" class="form-control"  id="address"  placeholder="Address" required>
+                <input type="text" class="form-control"  id="address" name="address"  placeholder="Address" required>
             </div>            
 			<div class="form-row">								
-   				 <textarea placeholder="Condition" class="form-control" id="condition" rows="3"  aria-describedby="emailHelp" required></textarea>
+   				 <textarea placeholder="Condition" class="form-control" id="condition" name="condition" rows="3"  aria-describedby="emailHelp" required></textarea>
  			</div>
-            <div class="form-row">
+            <div class="form-row"> <p id="privacyTerms" class="small_text"><a>
+               Appointment Schedule</a>
+              </p> 
                 <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control">
             </div>            
               <p id="privacyTerms" class="small_text"><a>
                 Guardian Info </a>
               </p>              
              <div class="form-row">
-				<input type="text" class="form-control"  id="guardian"  placeholder="Guardian's Fullname" required>
+				<input type="text" class="form-control"  id="guardian" name="guardian"  placeholder="Guardian's Fullname">
 			</div>
 			 <div class="form-row">
-				<input type="text" class="form-control"  id="relation"  placeholder="Relationship" required>
+				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
-               <a href="index.html" class="btn btn-primary">Appoint</a>    
+               <button type="submit" class="btn btn-primary">APPOINT</button>
               </center>
-             
 
             </form>
           </div>

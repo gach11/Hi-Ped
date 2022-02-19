@@ -1,6 +1,7 @@
 package com.login.util;
  
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
  
@@ -9,7 +10,7 @@ public class DBConnection {
     public static Connection createConnection()
     {
     Connection con = null;
-    String url = "jdbc:mysql://localhost:3306/telehealth?useTimezone=true&serverTimezone=UTC";
+    String url = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
     String username = "root";
     String password = "Root";
     System.out.println("In DBConnection.java class ");
