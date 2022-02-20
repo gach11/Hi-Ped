@@ -271,7 +271,7 @@ summary {
 .container .login_section form .form-row .form-control,
 .container .signup_section form .form-row .form-control {
   width: 280px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   padding: 8px 20px;
   margin-top: 10px;
 }
@@ -304,7 +304,7 @@ summary {
 .container .signup_section form .form-check .form-check-label,
 .container .login_section form .form-check a,
 .container .signup_section form .form-check a {
-  font-size: 11px;
+  font-size: 13px;
 }
 @media only screen and (max-width: 575px) {
   /* line 116, ../sass/stylesheet.scss */
@@ -581,7 +581,7 @@ body {
 .container .signup_section {
   padding-top: 100px;
   padding-bottom: 113px;
-  padding-left: 108px;
+  padding-left: 158px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 314, ../sass/stylesheet.scss */
@@ -655,7 +655,7 @@ body {
   padding-left: 20px;
   margin-top: 10px;
   color: #98a6a9;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.5em;
 }
 /* line 379, ../sass/stylesheet.scss */
