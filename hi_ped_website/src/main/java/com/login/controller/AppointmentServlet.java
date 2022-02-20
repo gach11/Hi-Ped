@@ -46,7 +46,6 @@ public class AppointmentServlet extends HttpServlet {
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 		try {
-		
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			SimpleDateFormat timeStamp = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm");
 			 java.util.Date newBod = dateFormat.parse(bod);
@@ -73,7 +72,7 @@ public class AppointmentServlet extends HttpServlet {
 				ps.setString(11, g_relation);
 				
 			int rowCount = ps.executeUpdate();
-			dispatcher = request.getRequestDispatcher("index.html");
+			dispatcher = request.getRequestDispatcher("Client.jsp");
 			
 			if (rowCount > 0) {
 				request.setAttribute("status", "success");
