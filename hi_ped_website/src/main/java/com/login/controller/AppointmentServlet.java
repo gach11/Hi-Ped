@@ -73,7 +73,7 @@ public class AppointmentServlet extends HttpServlet {
 				ps.setString(11, g_relation);
 				
 			int rowCount = ps.executeUpdate();
-			dispatcher = request.getRequestDispatcher("Client.jsp");
+			dispatcher = request.getRequestDispatcher("index.html");
 			
 			if (rowCount > 0) {
 				request.setAttribute("status", "success");
