@@ -38,30 +38,30 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
 
-                        <li class="sidebar-item active ">
-                            <a href="doctor_appointment.jsp" class='sidebar-link'>
+                        <li class="sidebar-item">
+                            <a href="patient_profile.jsp" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Appointment Records</span>
+                                <span>Update Profile</span>
                             </a>
                         </li>
                                          
-                        <li class="sidebar-item  ">
-                            <a href="doctor_request.jsp" class='sidebar-link'>
+                        <li class="sidebar-item active">
+                            <a href="patient_appointment.jsp" class='sidebar-link'>
                                 <i class="bi bi-file-medical-fill"></i>
-                                <span>Appointment Request</span>
+                                <span>Appointment</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item  ">
-                            <a href="doctor_calendar.jsp" class='sidebar-link'>
+                            <a href="#" class='sidebar-link'>
                                 <i class="bi bi-calendar-day-fill"></i>
                                 <span>Calendar</span>
                             </a>
-                        </li><br><br><br><br><br><br><br><br><br>                  
+                        </li>  <br><br><br><br><br><br><br><br><br>                  
                       <br><br><br><br><br><br><br><br><br><br><br>
                         <li class="sidebar-item">
                           </span> <button type="button" class="btn btn-danger">Logout</button>                                                           
-                        </li>    
+                        </li>  
                     </ul>                           
                 </div>
             </div>
@@ -86,12 +86,9 @@
                             <th>ID</th>
                             <th>Full Name</th>
                             <th>Birthday</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Address</th>
+                            <th>Age</th>                                                     
                             <th>Concern</th>
-                            <th>Date and Time</th>
-                            <th>Guardian</th>
+                            <th>Date and Time</th>                           
                             <th>Status</th>
                             
                             
@@ -109,10 +106,7 @@
                                 <td><c:out value="${user.address}" /></td>    
                                 <td><c:out value="${user.address}" /></td>  
                                 <td><c:out value="${user.address}" /></td>  
-                                <td><c:out value="${user.address}" /></td>  
-                                <td><c:out value="${user.address}" /></td>  
-                                <td><c:out value="${user.address}" /></td> 
-                                                                                                                          
+                                                                          
                             </tr>
                         </c:forEach>
                     </tbody>

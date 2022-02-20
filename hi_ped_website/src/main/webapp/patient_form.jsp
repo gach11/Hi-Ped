@@ -23,7 +23,7 @@
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
             <form action = "<%=request.getContextPath()%>/appoint" class="needs-validation" novalidate method="post">
-              <h1>Patient Forms</h1>
+              <h1>Patient Form</h1>
               
 			<div class="form-row">  
 				<div class="form-check form-check-inline">
@@ -83,8 +83,8 @@
 				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
-               <button type="submit" class="btn btn-primary">APPOINTS</button>
-              </center>
+               <button type="submit" class="btn btn-primary">APPOINT</button>
+              </center><br><br><br><br><br><br>
 
             </form>
           </div>

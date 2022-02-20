@@ -40,7 +40,7 @@
 
                         <li class="sidebar-item ">
                             <a href="doctor_appointment.jsp" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical"></i>
+                                <i class="bi bi-file-earmark-medical-fill"></i>
                                 <span>Appointment Records</span>
                             </a>
                         </li>
@@ -57,7 +57,12 @@
                                 <i class="bi bi-calendar-day-fill"></i>
                                 <span>Calendar</span>
                             </a>
-                        </li>                              
+                        </li><br><br><br><br><br><br><br><br><br>                  
+                      <br><br><br><br><br><br><br><br><br><br><br>
+                        <li class="sidebar-item">
+                          </span> <button type="button" class="btn btn-danger">Logout</button>                                                           
+                        </li>    
+                     </ul>                           
                 </div>
             </div>
         </div>
@@ -79,16 +84,18 @@
                     Simple Datatable
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped" id="table1">
+                    <table class="table table-sm" id="table1">
                       <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Email</th>
-                            <th>Guardian</th>
+                            <th>Full Name</th>
+                            <th>Birthday</th>
                             <th>Age</th>
+                            <th>Gender</th>
                             <th>Address</th>
+                            <th>Concern</th>
+                            <th>Date and Time</th>
+                            <th>Guardian</th>                        
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -99,15 +106,17 @@
                                 <td><c:out value="${user.studentID}" /></td>
                                 <td><c:out value="${user.lastname}" /></td>
                                 <td><c:out value="${user.firstname}" /></td>
-                                <td><c:out value="${user.email}" /></td>
-                                <td><c:out value="${user.address}" /></td>  
+                                <td><c:out value="${user.email}" /></td>                               
+								<td><c:out value="${user.address}" /></td>
+								<td><c:out value="${user.address}" /></td> 
+								<td><c:out value="${user.address}" /></td>   
                                 <td><c:out></td>
                                 <td><c:out></td>
                                 
-                                <td><a href="edit?studentID=<c:out value='${user.studentID}' />" class="btn btn-primary btn-xs"
+                                <td><a href="edit?studentID=<c:out value='${user.studentID}' />" class="btn btn-primary btn-sm"
                                     role="button" aria-pressed="true">Approve</a>
                                        &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?studentID=<c:out value='${user.studentID}' />" 
-                                       class="btn btn-danger" role="button" aria-pressed="true">Resched</a></td>                                                                                                
+                                       class="btn btn-danger btn-sm" role="button" aria-pressed="true">Resched</a></td>                                                                                                
                             </tr>
                         </c:forEach>
             

@@ -40,7 +40,7 @@
 
                         <li class="sidebar-item ">
                             <a href="doctor_appointment.jsp" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical"></i>
+                                <i class="bi bi-file-earmark-medical-fill"></i>
                                 <span>Appointment Records</span>
                             </a>
                         </li>
@@ -57,7 +57,12 @@
                                 <i class="bi bi-calendar-day-fill"></i>
                                 <span>Calendar</span>
                             </a>
-                        </li>   
+                        </li>
+                        <br><br><br><br><br><br><br><br><br>                  
+                      <br><br><br><br><br><br><br><br><br><br><br>
+                        <li class="sidebar-item">
+                          </span> <button type="button" class="btn btn-danger">Logout</button>                                                           
+                        </li>    
                      </ul>                           
                 </div>
             </div>
