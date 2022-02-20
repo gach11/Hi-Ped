@@ -93,9 +93,7 @@
                             <th>Date and Time</th>
                             <th>Guardian</th>
                             <th>Status</th>
-                            
-                            
-                          
+                                                                               
                         </tr>
                     </thead>
                     <tbody>
