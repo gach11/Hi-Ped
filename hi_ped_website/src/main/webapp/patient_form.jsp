@@ -83,7 +83,7 @@
 				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
-               <button type="submit" class="btn btn-primary">APPOINT</button>
+               <button type="submit" class="btn btn-primary">APPOINTS</button>
               </center>
 
             </form>
