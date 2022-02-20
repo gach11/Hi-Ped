@@ -1,6 +1,7 @@
 package com.login.controller;
 
 import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -22,7 +23,6 @@ public class SignupServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -33,6 +33,8 @@ public class SignupServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String role = "Client";
+		
+		
 		RequestDispatcher dispatcher = null;
 		
 		Connection con = null;
