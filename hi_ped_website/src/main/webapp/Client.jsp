@@ -8,13 +8,13 @@
 if((request.getSession(false).getAttribute("Client")== null) )
 {
 %>
-<jsp:forward page="login.jsp"></jsp:forward>
+<jsp:forward page="index2.html"></jsp:forward>
 <%} %>
 <body>
     <center><h2>Client's Home</h2></center>
     Welcome <%=request.getAttribute("userName") %>
  
-    <div style="text-align: right"><a href="<%=request.getContextPath()%>/login.jsp">Logout</a></div>
+    <div style="text-align: right"><a href="<%=request.getContextPath()%>/index.html">Logout</a></div>
  
 </body>
 </html>
