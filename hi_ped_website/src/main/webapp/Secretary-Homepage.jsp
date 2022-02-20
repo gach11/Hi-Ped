@@ -8,7 +8,7 @@
 if((request.getSession(false).getAttribute("Secretary")== null) )
 {
 %>
-<jsp:forward page="/JSP/Login.jsp"></jsp:forward>
+<jsp:forward page="index2.html"></jsp:forward>
 <%} %>
 <body>
 <center><h2>Secretary's Home</h2></center>
