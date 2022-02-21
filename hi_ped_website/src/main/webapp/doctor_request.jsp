@@ -73,11 +73,6 @@
                 <i class="bi bi-justify fs-3"></i>
             </a>
         </header>
-
-        
-
-
-
         <section class="section">
             <div class="card">
                 <div class="card-header">
