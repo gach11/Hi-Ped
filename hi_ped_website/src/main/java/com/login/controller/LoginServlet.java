@@ -1,4 +1,4 @@
-Sysoutpackage com.login.controller;
+package com.login.controller;
 import java.io.IOException;
 
 
@@ -65,7 +65,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             session.setAttribute("Client", username);
             request.setAttribute("username", username);
  
-            request.getRequestDispatcher("Client.jsp").forward(request, response);
+            request.getRequestDispatcher("index2.html").forward(request, response);
         }
         else
         {

@@ -537,7 +537,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../css/img/about.jpg") center center no-repeat;
+  background: url("../css/img/pedia.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -1147,6 +1147,11 @@ section {
   text-align: center;
   font-size: 13px;
 }
+
+#footer .row::after {
+  content: "";
+  clear: both;
+  display: table;
 
 /*--------------------------------------------------------------
 # Back to top button
