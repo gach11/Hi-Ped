@@ -44,7 +44,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             session.setAttribute("Doctor", username); //setting session attribute
             request.setAttribute("username", username);
  
-            request.getRequestDispatcher("Doctor-Homepage.jsp").forward(request, response);
+            request.getRequestDispatcher("master-admin.jsp").forward(request, response);
         }
         else if(userValidate.equals("Secretary"))
         {

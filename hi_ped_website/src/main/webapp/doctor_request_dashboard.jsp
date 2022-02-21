@@ -83,10 +83,10 @@
 								<a href="master-admin.jsp"><i class="fa fa-caret-square-o-right" style="font-size:17px"></i> Doctor's Dashboard</a><br>
 							</li>
 							<li>
-								<a href="doctor_appointment_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Appointment Request Records</a><br>
+								<a href="doctor_request_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Appointment Request Records</a><br>
 							</li>
 							<li  class="active">
-								<a href="doctor_request_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Records of Approved/Resched</a><br>
+								<a href="doctor_appointment_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Records of Approved/Resched</a><br>
 							</li>
 							<li>
 								<a href="#"><i class="fa fa-archive" style="font-size:17px"></i> Calendar</a>
