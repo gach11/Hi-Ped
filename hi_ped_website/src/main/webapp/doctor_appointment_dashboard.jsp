@@ -16,10 +16,11 @@
 	Statement statement = null;
 	ResultSet resultSet = null;
 --%>
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Hi! Ped Clinic</title>
+        <title>Doctor Dashboard</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
