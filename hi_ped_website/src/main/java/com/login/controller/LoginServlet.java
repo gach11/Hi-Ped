@@ -54,7 +54,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             session.setAttribute("Secretary", username);
             request.setAttribute("username", username);
  
-            request.getRequestDispatcher("Secretary-Homepage.jsp").forward(request, response);
+            request.getRequestDispatcher("secretary_dashboard.jsp").forward(request, response);
         }
         else if(userValidate.equals("Client"))
         {
