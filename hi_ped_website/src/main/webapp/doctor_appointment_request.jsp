@@ -23,7 +23,7 @@ ResultSet resultSet = null;
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Mini Projects</title>
+        <title>Hi! Ped | Clinic</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -84,16 +84,16 @@ ResultSet resultSet = null;
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="doctor_dashboard.jsp"><i class="fa fa-caret-square-o-right" style="font-size:17px"></i> Doctor's Dashboard</a><br><br>
-							</li>
-							<li>
-								<a href="doctor_appointment_request.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Appointment Request Records</a><br>
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:17px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li  class="active">
-								<a href="doctor_approve_resched.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Records of Approved/Resched</a><br>
+								<a href="#"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Request</a><br>
+							</li>
+							<li >
+								<a href="doctor_approve_resched.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Appointment Status</a><br>
 							</li>
 							<li>
-								<a href="doctor_calendar.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Calendar</a>
+								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>
@@ -123,6 +123,7 @@ ResultSet resultSet = null;
 							<td>Concern</td>
 							<td>Date and Time</td>
 							<td>Guardian</td>
+							<td>Action</td>
                         </tr>
                     </thead>
                     <%
@@ -139,10 +140,10 @@ ResultSet resultSet = null;
 						<td><%=resultSet.getString("message") %></td>
 						<td><%=resultSet.getString("datetime") %></td>
 						<td><%=resultSet.getString("guardian") %></td>
-						<td><a href="edit?studentID=<c:out value='${user.studentID}' />" class="btn btn-primary btn-sm"
+						<td><a href="edit?studentID=<c:out value='${user.studentID}' />" class="btn btn-primary btn-lg"
                                     role="button" aria-pressed="true">Approve</a>
                                        &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?studentID=<c:out value='${user.studentID}' />" 
-                                       class="btn btn-danger btn-sm" role="button" aria-pressed="true">Resched</a></td>
+                                       class="btn btn-danger btn-lg" role="button" aria-pressed="true">Resched</a></td>
 						</tr>
 						<%
 						}

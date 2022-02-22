@@ -20,7 +20,7 @@
     <head>
     <link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Mini Projects</title>
+        <title>Doctor Dashboard</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -29,6 +29,12 @@
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/content/css/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="css/assets1/css/bootstrap.css">
+    	<link rel="stylesheet" href="css/assets1/vendors/iconly/bold.css">
+    	<link rel="stylesheet" href="css/assets1/vendors/perfect-scrollbar/perfect-scrollbar.css">
+   	 	<link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
+   	 	<link rel="stylesheet" href="css/assets1/css/app.css">
         
   
            
@@ -39,9 +45,9 @@
             <div class="header">
             	<!--title header-->
 				<div class="header-left">
-	                <div class="page-title-box pull-left" style="padding-top:0px">
-	                <img src="css/img/logo3.png" style="height:50px"/>
-	                </div>
+				<h3 class="logo me-auto"><a href="index.html">
+      	<img src="css/img/logo3.png" width="30" height="30" class="d-inline-block align-top" alt="">
+   			Hi! Ped | Clinic</a></h3>	               
                 </div>
                
 				<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -69,16 +75,16 @@
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="active"> 
-								<a href="master-admin.jsp"><i class="fa fa-caret-square-o-right" style="font-size:17px"></i> Doctor's Dashboards</a><br>
+								<a href="master-admin.jsp"><i class="bi bi-journal-album" style="font-size:17px"></i> Doctor's Dashboards</a><br>
 							</li>
 							<li>
-								<a href="doctor_request_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Appointment Request Records</a><br>
+								<a href="doctor_request_dashboard.jsp"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Records</a><br>
 							</li>
 							<li>
-								<a href="doctor_appointment_dashboard.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Records of Approved/Resched</a><br>
+								<a href="doctor_appointment_dashboard.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Appointment Approval</a><br>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-archive" style="font-size:17px"></i> Calendar</a>
+								<a href="#"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>

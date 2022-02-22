@@ -45,7 +45,7 @@ a:active,
 a:focus {text-decoration:none;color: #009ce7;  outline: none;}
 .form-control {border-radius: 0;box-shadow: none;height: 40px;}
 .form-control:focus {border-color: #ff9b44;box-shadow: none;outline: 0 none;}
-a {color: #009ce7;}
+a {color: #ffffff;}
 input, button, a {transition: all 0.4s ease; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -ms-transition: all 0.4s ease; -webkit-transition: all 0.4s ease;}
 input, button {outline: none;}
 input[type="file"] {height:auto;}
@@ -341,7 +341,7 @@ table.dataTable {margin-bottom: 15px !important;margin-top: 15px !important;}
 		padding: 0 20px;
 		position: relative;
 		text-align: center;
-		width: 230px;
+		width: 300px;
 		z-index: 1;
 	}
 .logo {display: block;line-height: 60px;}
@@ -371,7 +371,7 @@ table.dataTable {margin-bottom: 15px !important;margin-top: 15px !important;}
 .status.offline {background-color: #f62d51;}
 .status.away {background-color: #faa937;}
 
-/*----------8. Sidebar----------*/
+/*---------- KULAY NG SIDEBAR----------*/
 .sidebar {
 	top: 60px;
 	width: 270px;
@@ -385,16 +385,19 @@ table.dataTable {margin-bottom: 15px !important;margin-top: 15px !important;}
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+
+
+/*KULAY NG HOVER----*/
 .sidebar-inner{height:100%;}
 .sidebar-menu ul {font-size: 14px;list-style-type: none;margin: 0;padding: 0;}
 .sidebar-menu li a {color: #fff;display: block;font-size: 17px;height: auto;line-height: 40px;min-height: 40px;padding: 0 20px;}
 .sidebar-menu li a:hover {
-	color: #D23641;
+	color:#192529;
 }
 .sidebar-menu li a > .badge {margin-top: 10px;}
 .sidebar-menu li.active a {
 	color: #fff;
-	background-color: #1977CC;
+	background-color: #1F3D48;
 }
 .menu-title {color: #ff9b44;font-size: 20px;line-height: 40px;min-height: 40px;padding: 0 20px;}
 .menu-title > i {float: right;line-height: 40px;}
