@@ -84,16 +84,16 @@ ResultSet resultSet = null;
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:17px"></i> Doctor's Dashboard</a><br><br>
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li  class="active">
-								<a href="#"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Request</a><br>
+								<a href="#"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li >
-								<a href="doctor_approve_resched.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Appointment Status</a><br>
+								<a href="doctor_approve_resched.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
-								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
+								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>

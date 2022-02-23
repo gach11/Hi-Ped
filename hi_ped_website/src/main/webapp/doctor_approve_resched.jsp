@@ -49,16 +49,14 @@ ResultSet resultSet = null;
            
     </head>
     <body>
-    	<div class="wrapper">
-        	<!--header-->
-            <div class="header">
-            	<!--title header-->
-				<div class="header-left">
-	                <div class="page-title-box pull-left" style="padding-top:0px">
-	                <img src="css/img/logo3.png" style="height:50px"/>
-	                </div>
-                </div>
-               
+    	<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link active ms-0" href="#" target="__blank">User Profile</a>
+        <a class="nav-link" href="userprofile2.jsp" target="__blank">History Appointment</a>
+        <a class="nav-link" href="index2.html" target="__blank">Home</a>
+    			</nav>
+             
 				<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
 				<ul class="nav navbar-nav navbar-right user-menu pull-right">
 					<li class="dropdown">
@@ -84,16 +82,16 @@ ResultSet resultSet = null;
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:17px"></i> Doctor's Dashboard</a><br><br>
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li>
-								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Request</a><br>
+								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li   class="active">
-								<a href="#"><i class="bi bi-journal-medical" style="font-size:17px"></i> Appointment Status</a><br>
+								<a href="#"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
-								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
+								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>

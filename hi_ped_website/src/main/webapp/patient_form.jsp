@@ -37,7 +37,7 @@
 				</div>
 				<div class="form-check form-check-inline">
   					<input class="form-check-input" type="radio" name="category" id="cat3" value="Adolescents">
-  					<label class="form-check-label" for="cat3">Adolescents</label>
+  					<label class="form-check-label" for="cat3">Adolescent</label>
 				</div>
             </div>
               
@@ -84,7 +84,8 @@
 				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
-               <button type="submit" class="btn btn-primary">APPOINT</button>
+               <a href="index2.html" class="btn btn-primary">BACK</a>
+              <button type="submit" class="btn btn-outline-primary">SUBMIT</button>
               </center><br><br><br><br><br><br>
 
             </form>
