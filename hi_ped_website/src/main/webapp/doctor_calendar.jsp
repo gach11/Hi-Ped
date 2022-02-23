@@ -52,22 +52,22 @@
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
-							<li class="active"> 
-								<a href="doctor_dashboard.jsp"><i class="fa fa-caret-square-o-right" style="font-size:17px"></i> Doctor's Dashboards</a><br><br>	
+							<li> 
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li>
-								<a href="doctor_appointment_request.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Appointment Request Records</a><br>
+								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
+							</li>
+							<li   class="active">
+								<a href="doctor_approve_resched.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
-								<a href="doctor_approve_resched.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Records of Approved/Resched</a><br>
-							</li>
-							<li>
-								<a href="doctor_calendar.jsp"><i class="fa fa-archive" style="font-size:17px"></i> Calendar</a>
+								<a href="#"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>
                 </div>
-            </div>
+            </div><br><br><br><br>
             <!-- dashboard -->
           	<decorator:body />
 		</div>
