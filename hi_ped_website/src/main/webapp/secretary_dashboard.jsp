@@ -4,7 +4,7 @@
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Mini Projects</title>
+        <title>Hi! Ped | Clinic</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -60,7 +60,7 @@
 								<a href="secretary_appointment_status_view.jsp"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Status</a><br>
 							</li>
 							<li >
-								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient Status</a><br>
+								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
 								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Client List</a>
