@@ -128,17 +128,17 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from appointmentdata";
+						String sql ="select * from appointmentselecteddata";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
 						<tr>
 						<td><%=resultSet.getString("patientId") %></td>
 						<td><%=resultSet.getString("fullname") %></td>
-						<td><%=resultSet.getString("message") %></td>
+						<td><%=resultSet.getString("concern") %></td>
 						<td><%=resultSet.getString("datetime") %></td>
 						<td><%=resultSet.getString("guardian") %></td>
-						<td>Approved</td>
+						<td><%=resultSet.getString("status") %></td>
 					
 					
 						</tr>
