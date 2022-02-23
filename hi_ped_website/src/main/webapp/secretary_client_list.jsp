@@ -84,23 +84,23 @@ ResultSet resultSet = null;
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
-							<li class="active"> 
+							<li> 
 								<a href="#"><i class="bi bi-journal-album" style="font-size:17px"></i> Secretary's Dashboard</a><br><br>
 							</li>
 							<li>
 								<a href="secretary_appointment_status_view.jsp"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Status</a><br>
 							</li>
-							<li >
+							<li>
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
-							<li>
+							<li class="active">
 								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Client List</a>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
 							</li>
 							<li>
-								<a href="secretary_send_email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>

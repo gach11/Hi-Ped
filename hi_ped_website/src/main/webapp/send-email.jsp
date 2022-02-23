@@ -40,7 +40,7 @@
               <div class="form-row">
                 <textarea rows="10" cols="5" class="form-control" id="subject" name="message" style="height: 150px text-align:;" placeholder="Message" required></textarea>
               </div>               
-              <a href="index.html" class="btn btn-primary">BACK</a>
+              <a href="secretary_dashboard.jsp" class="btn btn-primary">BACK</a>
               <button type="submit" class="btn btn-outline-primary">SEND</button>
                                                      
 

@@ -4,7 +4,7 @@
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Hi! Ped | Clinicsssss</title>
+        <title>Hi! Ped | Clinic</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -69,7 +69,7 @@
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
 							</li>
 							<li>
-								<a href="secretary_send_email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>
