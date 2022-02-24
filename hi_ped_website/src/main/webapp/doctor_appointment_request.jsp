@@ -99,8 +99,7 @@ ResultSet resultSet = null;
 					</div>
                 </div>
             </div><br><br><br><br>
-            <!-- dashboard -->
-                      
+            <!-- dashboard -->                     
 		</div>
 		   <div id="main">
         <header class="mb-3">

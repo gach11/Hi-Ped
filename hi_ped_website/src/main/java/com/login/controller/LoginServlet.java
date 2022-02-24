@@ -1,7 +1,6 @@
 package com.login.controller;
 import java.io.IOException;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,9 +36,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         String userValidate = loginDao.authenticateUser(loginBean);
  
         if(userValidate.equals("Doctor"))
-        {
-            System.out.println("Doctor's Home");
- 
+        {          
             HttpSession session = request.getSession(); //Creating a session
             session.setAttribute("Doctor", username); //setting session attribute
             request.setAttribute("username", username);
@@ -48,18 +45,15 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         }
         else if(userValidate.equals("Secretary"))
         {
-            System.out.println("Secretary's Home");
- 
+          
             HttpSession session = request.getSession();
             session.setAttribute("Secretary", username);
             request.setAttribute("username", username);
- 
             request.getRequestDispatcher("secretary_dashboard.jsp").forward(request, response);
         }
         else if(userValidate.equals("Client"))
         {
-            System.out.println("Client's Home");
- 
+           
             HttpSession session = request.getSession();
             session.setMaxInactiveInterval(10*60);
             session.setAttribute("Client", username);
