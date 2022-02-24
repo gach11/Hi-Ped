@@ -30,7 +30,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     loginBean.setPassword(password);
  
     LoginDao loginDao = new LoginDao();
- 
+      
     try
     {
         String userValidate = loginDao.authenticateUser(loginBean);

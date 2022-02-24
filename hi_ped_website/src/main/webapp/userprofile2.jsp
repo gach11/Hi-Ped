@@ -41,9 +41,9 @@
     	<div class="container-xl px-4 mt-4">
     	<!-- Account page navigation-->
     	<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
-        <a class="nav-link" href="userprofile.jsp"target="___blank">User Profile</a>
-        <a class="nav-link active ms-0" href="#" target="__blank">History Appointment</a>
-        <a class="nav-link" href="index2.html" target="__blank">Home</a>
+        <a class="nav-link" href="userprofile.jsp">User Profile</a>
+        <a class="nav-link active ms-0" href="#">History Appointment</a>
+        <a class="nav-link" href="index2.html">Home</a>
         <a href="patient_form.jsp" class="appointment-btn scrollto" style="text-decoration: none"><span class="d-none d-md-inline">Make an </span>Appointment</a>
    		 </nav>
    		 
