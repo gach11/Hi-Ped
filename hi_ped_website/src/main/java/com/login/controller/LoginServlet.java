@@ -65,7 +65,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         {
             System.out.println("Error message = "+userValidate);
             request.setAttribute("errMessage", userValidate);
- 
+            
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
