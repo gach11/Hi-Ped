@@ -1,3 +1,18 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<% //In case, if User session is not set, redirect to Login page.
+	
+
+	response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Cache-Control", "no-cache"); // HTTP 1.1
+	response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    
+	session = request.getSession();
+    
+    if(session.getAttribute("Client")==null || session.getAttribute("Client")=="" || session.getAttribute("Client").equals("") )
+    {
+    	response.sendRedirect("login.jsp");
+    }
+ %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -19,7 +34,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end ">
         <a class="nav-link active ms-0" href="#">User Profile</a>
         <a class="nav-link" href="userprofile2.jsp">History Appointment</a>
-        <a class="nav-link" href="index2.html">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
          <a href="patient_form.jsp" class="appointment-btn scrollto" style="text-decoration: none"><span class="d-none d-md-inline">Make an </span> Appointment</a>
     </nav>
     
@@ -45,50 +60,38 @@
                         <!-- Form Group (username)-->
                         <div class="mb-3">
                             <label class="labels" for="inputUsername">Fullname</label>
-                            <input class="form-control" id="inputUsername" type="text" value="">
+                            <input class="form-control" name="fullname" id="inputUsername" type="text" value="">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
                                 <label class="labels" for="inputOrgName">Username</label>
-                                <input class="form-control" id="inputOrgName" type="text" value="">
+                                <input class="form-control" name="username" id="inputOrgName" type="text" value="<%=request.getAttribute("username") %>">
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="labels" for="inputLocation">Email</label>
-                                <input class="form-control" id="inputLocation" type="text"  value="">
+                                <input class="form-control" name = "email" id="inputLocation" type="text"  value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="labels" for="currentPassword">Current Password</label>
+                                <input class="form-control" name="password" id="currentPassword" type="password" value="<%=request.getAttribute("password") %>">
+                            </div>
+                            <div class="mb-3">
+                                <label class="labels" for="newPassword">New Password</label>
+                                <input class="form-control"name="newPassword" id="newPassword" type="password">
+                            </div>
+                            <div class="mb-3">
+                                <label class="labels" for="currentPassword">Confirm Password</label>
+                                <input class="form-control" name="confirmPassword" id="confirmPassword" type="password">
                             </div>
                         </div>
                         <!-- Save changes button-->
                         <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
-                    </form>
+                        </form>
                 </div>
             </div>
-            <!-- Change password card-->
-                <div class="card mb-4">
-                    <div class="card-header">Change Password</div>
-                    <div class="card-body">
-                        <form>
-                            <!-- Form Group (current password)-->
-                            <div class="mb-3">
-                                <label class="labels" for="currentPassword">Current Password</label>
-                                <input class="form-control" id="currentPassword" type="password">
-                            </div>
-                            <!-- Form Group (new password)-->
-                            <div class="mb-3">
-                                <label class="labels" for="newPassword"> New Password</label>
-                                <input class="form-control" id="newPassword" type="password" >
-                            </div>
-                            <!-- Form Group (confirm password)-->
-                            <div class="mb-3">
-                                <label class="labels" for="confirmPassword">Confirm Password</label>
-                                <input class="form-control" id="confirmPassword" type="password">
-                            </div>
-                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save</button></div>
-                        </form>
-                    </div>
-                </div>
         </div>
     </div>
 </div>

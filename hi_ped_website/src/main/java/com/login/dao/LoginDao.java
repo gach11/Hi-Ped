@@ -1,9 +1,6 @@
 package com.login.dao;
  
 import java.sql.Connection;
-
-
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -53,4 +50,5 @@ public String authenticateUser(LoginBean loginBean)
     }
     return "Invalid user credentials";
 }
+
 }
