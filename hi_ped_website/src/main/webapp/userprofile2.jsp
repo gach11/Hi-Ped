@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<% String username=(String)request.getAttribute("Client"); %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -6,35 +8,11 @@
 
 <head>
 <meta charset="ISO-8859-1">
-	<%@page import="java.sql.DriverManager"%>
-	<%@page import="java.sql.ResultSet"%>
-	<%@page import="java.sql.Statement"%>
-	<%@page import="java.sql.Connection"%>
-	<%
-		String id = request.getParameter("userid");
-		String driver = "com.mysql.jdbc.Driver";
-		String connectionUrl = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
-		String database = "telehealth";
-		String userid = "root";
-		String password = "Root";
-						try {
-						Class.forName(driver);
-						} catch (ClassNotFoundException e) {
-						e.printStackTrace();
-						}
-						Connection connection = null;
-						Statement statement = null;
-						ResultSet resultSet = null;
-						%>
 		<title>Client Profile</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style_user.css">
 		<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
-		
-		
-		
-
 	</head>
     <body>
     
@@ -43,7 +21,7 @@
     	<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
         <a class="nav-link" href="userprofile.jsp">User Profile</a>
         <a class="nav-link active ms-0" href="#">History Appointment</a>
-        <a class="nav-link" href="index2.html">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
         <a href="patient_form.jsp" class="appointment-btn scrollto" style="text-decoration: none"><span class="d-none d-md-inline">Make an </span>Appointment</a>
    		 </nav>
    		 
@@ -59,79 +37,39 @@
                         <tr>
                             <th class="border-gray-200" scope="col">Category</th>
                             <th class="border-gray-200" scope="col">Patient Name</th>
-                            <th class="border-gray-200" scope="col">Amount</th>
-                            <th class="border-gray-200" scope="col">Status</th>
+                            <th class="border-gray-200" scope="col">Gender</th>
+                            <th class="border-gray-200" scope="col">Date of Birth</th>
+                            <th class="border-gray-200" scope="col">Age</th>
+                            <th class="border-gray-200" scope="col">Gender</th>
+                            <th class="border-gray-200" scope="col">Address</th>
+                            <th class="border-gray-200" scope="col">Guardian</th>
+                            <th class="border-gray-200" scope="col">Relation</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>#39201</td>
-                            <td>06/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-light text-dark">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38594</td>
-                            <td>05/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38223</td>
-                            <td>04/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38125</td>
-                            <td>03/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     <div class="card mb-4">
-        <div class="card-header">Billing History</div>
+        <div class="card-header">Appointment History</div>
         <div class="card-body p-0">
             <!-- Billing history table-->
             <div class="table-responsive table-billing-history">
                 <table class="table mb-0">
                     <thead>
                         <tr>
-                            <th class="border-gray-200" scope="col">Transaction ID</th>
-                            <th class="border-gray-200" scope="col">Date</th>
-                            <th class="border-gray-200" scope="col">Amount</th>
+                            <th class="border-gray-200" scope="col">Appointment ID</th>
+                            <th class="border-gray-200" scope="col">Patient Name</th>
+                            <th class="border-gray-200" scope="col">Date and Time</th>
+                            <th class="border-gray-200" scope="col">Concern</th>
                             <th class="border-gray-200" scope="col">Status</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>#39201</td>
-                            <td>06/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-light text-dark">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38594</td>
-                            <td>05/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38223</td>
-                            <td>04/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                        <tr>
-                            <td>#38125</td>
-                            <td>03/15/2021</td>
-                            <td>$29.99</td>
-                            <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -30,7 +30,8 @@ public class AppointmentServlet extends HttpServlet {
 		
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		
+		String userName = (String) request.getAttribute("username");
 		String ctc = request.getParameter("category");
 		String patientname = request.getParameter("name");
 		String number = request.getParameter("cnumber");
@@ -57,20 +58,21 @@ public class AppointmentServlet extends HttpServlet {
 			 Date newDob = new Date(dob);			 
 			 
 				con =  DBConnection.createConnection();
-				PreparedStatement ps = con.prepareStatement("insert into telehealth.appointmentdata(category,"
+				PreparedStatement ps = con.prepareStatement("insert into telehealth.appointmentdata(username, category,"
 						+ "fullname, cnumber, bod,age,gender,address,message,datetime,guardian,relation)"
 						+ "values (?,?,?,?,?,?,?,?,?,?,?)");
-				ps.setString(1, ctc);
-				ps.setString(2, patientname);
-				ps.setString(3, number);
-				ps.setDate(4, newDob);
-				ps.setInt(5, age);
-				ps.setString(6, gender);
-				ps.setString(7, address);
-				ps.setString(8, condition);
-				ps.setTimestamp(9, newts);
-				ps.setString(10, g_name);
-				ps.setString(11, g_relation);
+				ps.setString(1, userName);
+				ps.setString(2, ctc);
+				ps.setString(3, patientname);
+				ps.setString(4, number);
+				ps.setDate(5, newDob);
+				ps.setInt(6, age);
+				ps.setString(7, gender);
+				ps.setString(8, address);
+				ps.setString(9, condition);
+				ps.setTimestamp(10, newts);
+				ps.setString(11, g_name);
+				ps.setString(12, g_relation);
 				
 			int rowCount = ps.executeUpdate();
 			dispatcher = request.getRequestDispatcher("userprofile.jsp");
