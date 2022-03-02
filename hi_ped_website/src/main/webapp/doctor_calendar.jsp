@@ -3,10 +3,9 @@
 
 
 <html>
-<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Hi! Ped | Clinicsss</title>
+        <title>Mini Projects</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,9 +14,8 @@
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/content/css/style.css" />         
-        <link rel="stylesheet" href="css/app.css">
     </head>
-    <body class="dark">
+    <body>
     
     	<div class="wrapper">
         	<!--header-->
@@ -61,7 +59,7 @@
 								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li   class="active">
-								<a href="doctor_approve_resched.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
+								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
 								<a href="#"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
@@ -71,64 +69,14 @@
                 </div>
             </div><br><br><br><br>
             <!-- dashboard -->
+          	<decorator:body />
 		</div>
-		<div id="main">
-        <header class="mb-3">
-            <a href="#" class="burger-btn d-block d-xl-none">
-                <i class="bi bi-justify fs-3"></i>
-            </a>
-        </header>
-
-        <section class="section">
-            <div class="card">
-                <div class="card-header">
-                    <h1 style="text-align:center">Calendar</h1></div></div></section>
-        <div class="calendar">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">February</span>
-            <div class="year-picker">
-                <span class="year-change" id="prev-year">
-                    <pre><</pre>
-                </span>
-                <span id="year">2021</span>
-                <span class="year-change" id="next-year">
-                    <pre>></pre>
-                </span>
-            </div>
-        </div>
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days"></div>
-        </div>
-        <div class="calendar-footer">
-            <div class="toggle">
-                <span>Dark Mode</span>
-                <div class="dark-mode-switch">
-                    <div class="dark-mode-switch-ident"></div>
-                </div>
-            </div>
-        </div>
-        <div class="month-list"></div>
-    </div></div>
-
-    <script src="css/app.js"></script>
-
-    
-    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+		<div class="sidebar-overlay" data-reff="#sidebar"></div>
     	<script src="css/content/js/jquery-3.2.1.min.js"></script>
     	<script src="css/content/js/bootstrap.min.js"></script>
    		<script src="css/content/js/jquery.slimscroll.js"></script>
     	<script src="css/content/plugins/morris/morris.js"></script>
     	<script src="css/content/plugins/raphael/raphael-min.js"></script>
     	<script src="css/content/js/app.js"></script>
-
     </body>
-    </html>
+</html>

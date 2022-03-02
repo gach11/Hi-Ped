@@ -69,13 +69,10 @@ while(resultSet.next()){
                 <input type="text" class="form-control"  name="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
             </div>
             <div class="form-row"> 
-                <input type="text" class="form-control" name="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time"">
+                <input type="text" class="form-control" name="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
             </div> 
            <div class="form-row">
-            <select name="status" class="form-control" >
-				<option value="<%=resultSet.getString("status") %>">Approved</option>
-				<option value="<%=resultSet.getString("status") %>">Reschedule</option>
-			</select>
+         		<input type="text" class="form-control" name="status"  value="<%=resultSet.getString("status") %>" placeholder="Status">
 			</div>
             <center>
                <a href="index2.html" class="btn btn-primary">BACK</a>

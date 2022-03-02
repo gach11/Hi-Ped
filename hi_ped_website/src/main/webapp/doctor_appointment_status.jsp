@@ -83,22 +83,16 @@ ResultSet resultSet = null;
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="secretary_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Secretary's Dashboard</a><br><br>
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li>
-								<a href="secretary_appointment_status_view.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Status</a><br>
+								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li   class="active">
-								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Patient List</a><br>
+								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Client List</a>
-							</li>
-							<li>
-								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
-							</li>
-							<li>
-								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Send E-mail</a>
+								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
 							</li>
 						</ul>
 					</div>
