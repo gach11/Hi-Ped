@@ -158,10 +158,6 @@
 						value="<c:out value='${user.firstname}' />" class="form-control"
 						name="firstname" required="required">
 				</fieldset>
-				
-
-		
-
 				<button type="submit" class="btn btn-success">Save</button>
 				
 				</form>

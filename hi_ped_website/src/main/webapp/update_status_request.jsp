@@ -57,26 +57,32 @@ while(resultSet.next()){
               
 
 			<div class="form-row">
-				<input type="text" class="form-control" name="patientId"  value="<%=resultSet.getString("patientId") %>" placeholder="ID" >
+				<input type="text" class="form-control" name="patientId" id=patientId  value="<%=resultSet.getString("patientId") %>" placeholder="ID" >
 			</div>
             <div class="form-row">
-                <input type="text" class="form-control" name="fullname"  value="<%=resultSet.getString("fullname") %>" placeholder="Full Name" >
+                <input type="text" class="form-control" name="fullname" id="fullname" value="<%=resultSet.getString("fullname") %>" placeholder="Full Name" >
             </div>                     	                       	                                                		                                               
 			<div class="form-row">								
-   				 <input type="text" class="form-control" name="concern" value="<%=resultSet.getString("concern") %>" placeholder="Concern" >
+   				 <input type="text" class="form-control" name="concern" id="concern" value="<%=resultSet.getString("concern") %>" placeholder="Concern" >
  			</div>
  			<div class="form-row">
-                <input type="text" class="form-control"  name="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
+                <input type="text" class="form-control"  name="guardian" id="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
             </div>
             <div class="form-row"> 
+<<<<<<< HEAD
+                <input type="text" class="form-control" name="datetime" id="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
+=======
                 <input type="text" class="form-control" name="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
+>>>>>>> branch 'master' of https://github.com/manweollie/Hi-Ped.git
             </div> 
            <div class="form-row">
          		<input type="text" class="form-control" name="status"  value="<%=resultSet.getString("status") %>" placeholder="Status">
 			</div>
             <center>
-               <a href="index2.html" class="btn btn-primary">BACK</a>
-               <input type="submit" value="submit" class="btn btn-outline-primary">
+               <a href="index2.jsp" class="btn btn-primary">BACK</a>
+               <button type="button" id="submit" value="submit" class="btn btn-outline-primary"></button>
+               
+               
             </center>
            
 

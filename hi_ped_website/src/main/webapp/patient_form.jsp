@@ -13,9 +13,16 @@
     <meta name="author" content=""/>
     <title>Patient Form</title>
     <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom css -->
     <link href="css/stylesheets/Stylesheet2.css" rel="stylesheet">
+    <link href="css/patient.css" rel="stylesheet">
   </head>
 
   <body>
@@ -27,8 +34,20 @@
           <div class="col-12 m_bg_section_signup">          
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
+            
             <form action = "<%=request.getContextPath()%>/appoint" class="needs-validation" novalidate method="post">
+            <input type = "hidden" value="${currentUser.userId}" name="userId">
+			
               <h1>Patient Form</h1>
+	               <c:if test="${not empty succMsg }">
+		             <h6 class = "text-left text-success">${succMsg}</h6>
+		              <c:remove var="succMsg" scope="session"/>
+		              </c:if>
+		              				
+		              <c:if test="${not empty failedMsg}">
+		              <h6 class = "text-left text-danger">${failedMsg}</h6>
+		              <c:remove var="failedMsg" scope="session"/>
+		              </c:if>
               
 			<div class="form-row">  
 				<div class="form-check form-check-inline">
@@ -53,7 +72,7 @@
                 <input type="text" class="form-control"  id="number" name="cnumber"  placeholder="Contact Number" required>
             </div>
             <div class="form-row">
-                <input type="date" class="form-control"  id="bod" name="bod" placeholder="Birthdate">
+                <input type="date" class="form-control"  id="bod" name="bod" placeholder="Birthdate"required>
             </div>                     	                       	                                                
 		<div class="form-row">
                 <input type="text" class="form-control  w-25"  id="age" name="age"  placeholder="Age" required>    
@@ -71,27 +90,26 @@
                 <input type="text" class="form-control"  id="address" name="address"  placeholder="Address" required>
             </div>            
 			<div class="form-row">								
-   				 <textarea placeholder="Condition" class="form-control" id="condition" name="condition" rows="3"  aria-describedby="emailHelp" required></textarea>
+   				 <textarea placeholder="Condition" class="form-control" id="condition" name="msg" rows="3"  aria-describedby="emailHelp" required></textarea>
  			</div>
             <div class="form-row"> <p id="privacyTerms" class="small_text"><a>
                Appointment Schedule</a>
               </p> 
-                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control">
+                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control"required>
             </div>            
               <p id="privacyTerms" class="small_text"><a>
                 Guardian Info </a>
               </p>              
              <div class="form-row">
-				<input type="text" class="form-control"  id="guardian" name="guardian"  placeholder="Guardian's Fullname">
+				<input type="text" class="form-control"  id="guardian" name="guardian"  placeholder="Guardian's Fullname"required>
 			</div>
 			 <div class="form-row">
 				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
                <a href="index2.jsp" class="btn btn-primary">BACK</a>
-              <button type="submit" class="btn btn-outline-primary">SUBMIT</button>
+				<button type="submit" class="btn btn-outline-primary">SUBMIT</button>
               </center><br><br><br><br><br><br>
-
             </form>
           </div>
       </div>
@@ -104,5 +122,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="css/jss/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </body>
 </html>

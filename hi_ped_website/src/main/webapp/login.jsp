@@ -28,10 +28,12 @@
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 login_section">
             <form action = "<%=request.getContextPath()%>/login" method="post">
               <h1>Log in</h1>
+              
               <c:if test="${not empty failedMsg}">
               <h6 class = "text-left text-danger">${failedMsg}</h6>
               <c:remove var="failedMsg" scope="session"/>
               </c:if>
+              
               <div class="form-row">
                 <input type="text" class="form-control"  id="username" name = "username" aria-describedby="emailHelp" placeholder="Username" required>
               </div>
