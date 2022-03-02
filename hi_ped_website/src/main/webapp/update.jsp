@@ -49,7 +49,7 @@ Date and Time:<br>
 Status:<br>
 <input type="text" name="status" value="<%=resultSet.getString("status") %>">
 <br><br>
-<a href="doctor_appointment_request.jsp"><input type="submit" value="submit"></a>
+<input type="submit" value="submit">
 </form>
 <%
 }
