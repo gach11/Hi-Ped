@@ -126,9 +126,7 @@
         <div class="month-list"></div>
     </div></div>
 
-    <script src="css/app.js"></script>
-
-    
+    <script src="css/app.js"></script> 
     <div class="sidebar-overlay" data-reff="#sidebar"></div>
     	<script src="css/content/js/jquery-3.2.1.min.js"></script>
     	<script src="css/content/js/bootstrap.min.js"></script>

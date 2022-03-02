@@ -148,10 +148,8 @@ ResultSet resultSet = null;
                 </div>
             </div>
         </section>
-
     </div>
-		
-		
+				
 		<div class="sidebar-overlay" data-reff="#sidebar"></div>
     	<script src="css/content/js/jquery-3.2.1.min.js"></script>
     	<script src="css/content/js/bootstrap.min.js"></script>

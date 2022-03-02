@@ -20,7 +20,7 @@
     	<link rel="stylesheet" href="css/assets1/css/app.css">
     	<link rel="shortcut icon" href="css/assets1/images/favicon.svg" type="image/x-icon">	 
     </head>
-    <body>
+    <body  class="light">
     
     	<div class="wrapper">
         	<!--header-->
