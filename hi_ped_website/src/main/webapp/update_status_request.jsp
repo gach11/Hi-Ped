@@ -73,14 +73,9 @@ while(resultSet.next()){
 
             </div> 
            
-         		 <div class="form-check form-check-inline mx-auto">
-  				<input class="form-check-input" type="radio" name="gender" id="approve" value="approve">
-  				<label class="form-check-label" for="gender1">Approve</label>
-			</div>
-			<div class="form-check form-check-inline">
-  				<input class="form-check-input" type="radio" name="gender" id="resched" value="resched">
-  				<label class="form-check-label" for="gender2">Resched</label>
-			</div> 
+         	<div class="form-row">
+         		<input type="text" class="form-control" name="status" value="<%=resultSet.getString("status") %>" placeholder="status">
+         	</div>
 			
             <center>
                <a href="doctor_dashboard.jsp" class="btn btn-primary">BACK</a>

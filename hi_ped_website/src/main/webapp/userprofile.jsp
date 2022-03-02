@@ -74,7 +74,7 @@
                         <div class="mt-5 text-center">
                         <a href="usereditprofile.jsp" class="btn btn-primary profile-button" type="submit">Edit Profile</a></div>
                         </form>
-                        </div>
+                     </div>
                 </div>
             </div>
         </div>
