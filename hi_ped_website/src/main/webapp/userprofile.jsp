@@ -1,20 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% //In case, if User session is not set, redirect to Login page.
-	
-
-	response.setHeader("Cache-Control", "no-store");
-	response.setHeader("Cache-Control", "no-cache"); // HTTP 1.1
-	response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-    
-	session = request.getSession();
-    
-    if(session.getAttribute("Client")==null || session.getAttribute("Client")=="" || session.getAttribute("Client").equals("") )
-    {
-    	response.sendRedirect("login.jsp");
-    }
- %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,23 +47,23 @@
                         <!-- Form Group (username)-->
                         <div class="mb-3">
                             <label class="labels" for="inputUsername">Fullname</label>
-                            <input class="form-control" name="fullname" id="inputUsername" type="text" value="">
+                            <input class="form-control" name="fullname" id="inputUsername" type="text" value="${currentUser.fullname}">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
                                 <label class="labels" for="inputOrgName">Username</label>
-                                <input class="form-control" name="username" id="inputOrgName" type="text" value="<%=request.getAttribute("username") %>">
+                                <input class="form-control" name="username" id="inputOrgName" type="text" value="${currentUser.username}">
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="labels" for="inputLocation">Email</label>
-                                <input class="form-control" name = "email" id="inputLocation" type="text"  value="">
+                                <input class="form-control" name = "email" id="inputLocation" type="text"  value="${currentUser.email}">
                             </div>
                             <div class="mb-3">
                                 <label class="labels" for="currentPassword">Current Password</label>
-                                <input class="form-control" name="password" id="currentPassword" type="password" value="<%=request.getAttribute("password") %>">
+                                <input class="form-control" name="password" id="currentPassword" type="password" value="${currentUser.password}">
                             </div>
                             <div class="mb-3">
                                 <label class="labels" for="newPassword">New Password</label>

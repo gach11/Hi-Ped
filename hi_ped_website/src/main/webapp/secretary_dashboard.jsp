@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
@@ -35,7 +36,7 @@
 							<!--Connected to the Database - Placeholder for now-->
 							<span class="user-img"><img class="img-circle" src="css/content/images/user.jpg" width="40" alt="Doctor">
 							<span class="status online"></span></span>
-							<span><%=request.getAttribute("username") %></span>
+							<span>${currentUser.fullname}</span>
 							<i class="caret"></i>
 						</a>
 						<ul class="dropdown-menu">

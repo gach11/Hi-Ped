@@ -1,19 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% //In case, if User session is not set, redirect to Login page.
-	
-
-	response.setHeader("Cache-Control", "no-store");
-	response.setHeader("Cache-Control", "no-cache"); // HTTP 1.1
-	response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-    
-	session = request.getSession();
-    
-    if(session.getAttribute("Client")==null || session.getAttribute("Client")=="" || session.getAttribute("Client").equals("") )
-    {
-    	response.sendRedirect("login.jsp");
-    }
- %>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">

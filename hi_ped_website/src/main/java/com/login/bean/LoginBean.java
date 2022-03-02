@@ -1,13 +1,24 @@
 package com.login.bean;
  
 public class LoginBean {
- 
+
+	private int userId;
 	private String fullname;
 	private String email;
     private String username;
     private String password;
-    private String role;
     
+	
+	public LoginBean() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int i) {
+		this.userId = i;
+	}
 	public String getFullname() {
 		return fullname;
 	}
@@ -32,12 +43,10 @@ public class LoginBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
-		return role;
+	@Override
+	public String toString() {
+		return "LoginBean [userId=" + userId + ", fullname=" + fullname + ", email=" + email + ", username=" + username
+				+ ", password=" + password + "]";
 	}
-	public void setRole(String role) {
-		this.role = role;
-	}
-    
-    
+	
 }
