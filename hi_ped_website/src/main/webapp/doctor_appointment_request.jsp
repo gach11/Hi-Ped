@@ -110,18 +110,19 @@ ResultSet resultSet = null;
         <section class="section">
             <div class="card">
                 <div class="card-header">
-                    <h1 style="text-align:center">Appointment Records</h1>
+                    <h1 style="text-align:center">Patient List</h1>
                 </div>
                 <div class="card-body">
                     <table class="table table-sm" id="table1">
                       <thead class="thead-dark">
                         <tr>
-                            <td>ID</td>
-							<td>Full Name</td>
-							<td>Concern</td>
-							<td>Date and Time</td>
-							<td>Guardian</td>
-							<td>Action</td>
+                            <td style="text-align:center;">ID</td>
+							<td style="text-align:center;">Full Name</td>
+							<td style="text-align:center;">Concern</td>
+							<td style="text-align:center;">Guardian</td>
+							<td style="text-align:center;">Date and Time</td>
+							<td style="text-align:center;">Status</td>
+							<td style="text-align:center;">Action</td>
                         </tr>
                     </thead>
                     <%
@@ -130,18 +131,21 @@ ResultSet resultSet = null;
 						statement=connection.createStatement();
 						String sql ="select * from appointmentselecteddata";
 						resultSet = statement.executeQuery(sql);
+						int i=0;
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td><%=resultSet.getString("patientId") %></td>
-						<td><%=resultSet.getString("fullname") %></td>
-						<td><%=resultSet.getString("concern") %></td>
-						<td><%=resultSet.getString("datetime") %></td>
-						<td><%=resultSet.getString("guardian") %></td>
-						<td><a href="edit?studentID=<c:out value='${user.studentID}' />" class="btn btn-primary btn-lg"
-                                    role="button" aria-pressed="true">Approve</a>
-                                       &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?studentID=<c:out value='${user.studentID}' />" 
-                                       class="btn btn-danger btn-lg" role="button" aria-pressed="true">Resched</a></td>
+							<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
+							<td style="text-align:center;"><a href="update_status_request.jsp?patientId=<%=resultSet.getString("patientId")%>" class="btn btn-primary btn-lg"
+	                                    role="button" aria-pressed="true">Response</a>
+	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?patientId=<%=resultSet.getString("patientId") %>"class="btn btn-primary btn-lg"
+	                                    role="button" aria-pressed="true" >Delete</a>
+	                        </td>
 						</tr>
 						<%
 						}
@@ -154,7 +158,6 @@ ResultSet resultSet = null;
                 </div>
             </div>
         </section>
-
 
   
     </div>

@@ -117,12 +117,12 @@ ResultSet resultSet = null;
                     <table class="table table-sm" id="table1">
                       <thead class="thead-dark">
                         <tr>
-                            <td>ID</td>
-							<td>Full Name</td>
-							<td>Concern</td>
-							<td>Date and Time</td>
-							<td>Guardian</td>
-							<td>Status</td>
+                            <td style="text-align:center;">ID</td>
+							<td style="text-align:center;">Full Name</td>
+							<td style="text-align:center;">Concern</td>
+							<td style="text-align:center;">Guardian</td>
+							<td style="text-align:center;">Date and Time</td>
+							<td style="text-align:center;">Status</td>
                         </tr>
                     </thead>
                     <%
@@ -134,12 +134,12 @@ ResultSet resultSet = null;
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td><%=resultSet.getString("patientId") %></td>
-						<td><%=resultSet.getString("fullname") %></td>
-						<td><%=resultSet.getString("concern") %></td>
-						<td><%=resultSet.getString("datetime") %></td>
-						<td><%=resultSet.getString("guardian") %></td>
-						<td><%=resultSet.getString("status") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("status") %></td>
 					
 					
 						</tr>
