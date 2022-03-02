@@ -14,7 +14,7 @@ if((request.getSession(false).getAttribute("Client")== null) )
     <center><h2>Client's Home</h2></center>
     Welcome <%=request.getAttribute("userName") %>
  
-    <div style="text-align: right"><a href="<%=request.getContextPath()%>/index.html">Logout</a></div>
+    <div style="text-align: right"><a href="<%=request.getContextPath()%>/index.jsp">Logout</a></div>
  
 </body>
 </html>

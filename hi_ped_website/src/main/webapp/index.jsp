@@ -23,7 +23,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">hi.ped.clinic@gmail.com</a>
+        <i class="bi bi-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hi.ped.clinic@gmail.com&su=&body=">hi.ped.clinic@gmail.com</a>
         <i class="bi bi-phone"></i> (02) 831-2306
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">

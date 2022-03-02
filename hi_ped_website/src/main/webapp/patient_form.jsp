@@ -88,7 +88,7 @@
 				<input type="text" class="form-control"  id="relation" name="relation"  placeholder="Relationship" required>
 			</div>              
             <center>
-               <a href="index2.html" class="btn btn-primary">BACK</a>
+               <a href="index2.jsp" class="btn btn-primary">BACK</a>
               <button type="submit" class="btn btn-outline-primary">SUBMIT</button>
               </center><br><br><br><br><br><br>
 
