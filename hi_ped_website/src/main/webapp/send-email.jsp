@@ -22,27 +22,19 @@
           <div class="col-12 m_bg_section_signup">          
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
-            <form action ="<%=request.getContextPath()%>/signup" class="needs-validation" novalidate method="post">
-              
-              <div class="error" id="mail-error">
-                <img src="css/images/icon_error.svg" alt="error_icon"/>
-                Incorrect Username
-              </div>
+            <form action ="sendEmail" enctype="multipart/form-data" method="post">
                 <div class="form-row">
-                <input type="email" class="form-control"  id="toEmail" name="toEmail" aria-describedby="emailHelp" placeholder="To: Email@sample.com" required>
+                <input type="email" class="form-control" name="recipient" aria-describedby="emailHelp" placeholder="email@sample.com" required>
               </div>
               <div class="form-row">
-                <input type="email" class="form-control"  id="fromemail" name="fromemail" placeholder="From: hi.ped.clinic@gmail.com" required>
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
               </div>
               <div class="form-row">
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-row">
-                <textarea rows="10" cols="5" class="form-control" id="subject" name="message" style="height: 150px text-align:;" placeholder="Message" required></textarea>
-              </div>               
-              <a href="secretary_dashboard.jsp" class="btn btn-primary">BACK</a>
-              <button type="submit" class="btn btn-outline-primary">SEND</button>
-                                                     
+                <textarea rows="10" cols="5" class="form-control" name="content" style="height: 150px text-align:;" placeholder="Message" required></textarea>
+              </div>              
+              <button type="submit" value="send" class="btn btn-outline-primary">SEND</button>
+              <a href="secretary_dashboard.jsp" style="text-decoration:none;"><button type="button" class="btn btn-outline-primary">BACK</button></a>
+              
 
             </form>
           </div>

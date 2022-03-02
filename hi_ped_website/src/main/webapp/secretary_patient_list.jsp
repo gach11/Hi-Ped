@@ -84,7 +84,7 @@ ResultSet resultSet = null;
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="#"><i class="bi bi-journal-album" style="font-size:17px"></i> Secretary's Dashboard</a><br><br>
+								<a href="secretary_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:17px"></i> Secretary's Dashboard</a><br><br>
 							</li>
 							<li>
 								<a href="secretary_appointment_status_view.jsp"><i class="bi bi-journal-check" style="font-size:17px"></i> Appointment Status</a><br>
