@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
 <html>
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
         <title>Hi! Ped | Clinic</title>
