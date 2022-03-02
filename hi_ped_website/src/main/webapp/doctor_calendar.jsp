@@ -34,8 +34,8 @@
 							<!--Connected to the Database - Placeholder for now-->
 							<span class="user-img"><img class="img-circle" src="css/content/images/user.jpg" width="40" alt="Doctor">
 							<span class="status online"></span></span>
-							<span><%=request.getAttribute("username") %></span>
-							<i class="caret"></i>
+							<span>${currentUser.fullname}</span>
+
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="profile.html">Account Profile</a></li>

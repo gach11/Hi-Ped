@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -66,8 +69,7 @@ ResultSet resultSet = null;
 							<!--Connected to the Database - Placeholder for now-->
 							<span class="user-img"><img class="img-circle" src="css/content/images/user.jpg" width="40" alt="Doctor">
 							<span class="status online"></span></span>
-							<span><%=request.getAttribute("username") %></span>
-							<i class="caret"></i>
+							<span>${currentUser.fullname}</span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="profile.html">Account Profile</a></li>

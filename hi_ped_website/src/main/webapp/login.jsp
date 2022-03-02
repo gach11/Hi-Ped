@@ -1,10 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored = "false" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
   	<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0"> <!-- корректное отображение на мобильных устройствах, отмена масштабирования -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0">
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Log In</title>
@@ -24,23 +26,17 @@
             <img src="css/images/logo_m.png" alt=""/>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 login_section">
-            <form action = "<%=request.getContextPath()%>/login" class="needs-validation" novalidate method="post">
+            <form action = "<%=request.getContextPath()%>/login" method="post">
               <h1>Log in</h1>
-              
-              
+              <c:if test="${not empty failedMsg}">
+              <h6 class = "text-left text-danger">${failedMsg}</h6>
+              <c:remove var="failedMsg" scope="session"/>
+              </c:if>
               <div class="form-row">
                 <input type="text" class="form-control"  id="username" name = "username" aria-describedby="emailHelp" placeholder="Username" required>
               </div>
-              <div class="error" id="user-error">
-                <img src="css/images/icon_error.svg" alt="error_icon"/>
-                Incorrect Username
-              </div>
               <div class="form-row">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-              </div>
-              <div class="error" id="pass-error">
-                <img src="css/images/icon_error.svg" alt="error_icon" />
-                Incorrect Password
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="login_check">
@@ -50,7 +46,7 @@
               <input type="hidden" id="errMessage" value="<%= request.getAttribute("errMessage") %> ">
               <button type="submit" class="btn btn-primary">LOG IN</button>
               <a href="signup.jsp" type="submit" class="btn btn-outline-primary">SIGN UP</a>  
-              <div class="form-check"><a href="index.html">BACK</a></div>                 
+              <div class="form-check"><a href="index.jsp">BACK</a></div>                 
             </form>
           </div>
       </div>
