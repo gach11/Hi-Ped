@@ -69,18 +69,22 @@ while(resultSet.next()){
                 <input type="text" class="form-control"  name="guardian" id="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
             </div>
             <div class="form-row"> 
-<<<<<<< HEAD
                 <input type="text" class="form-control" name="datetime" id="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
-=======
-                <input type="text" class="form-control" name="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
->>>>>>> branch 'master' of https://github.com/manweollie/Hi-Ped.git
+
             </div> 
-           <div class="form-row">
-         		<input type="text" class="form-control" name="status"  value="<%=resultSet.getString("status") %>" placeholder="Status">
+           
+         		 <div class="form-check form-check-inline mx-auto">
+  				<input class="form-check-input" type="radio" name="gender" id="approve" value="approve">
+  				<label class="form-check-label" for="gender1">Approve</label>
 			</div>
+			<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="radio" name="gender" id="resched" value="resched">
+  				<label class="form-check-label" for="gender2">Resched</label>
+			</div> 
+			
             <center>
-               <a href="index2.jsp" class="btn btn-primary">BACK</a>
-               <button type="button" id="submit" value="submit" class="btn btn-outline-primary"></button>
+               <a href="doctor_dashboard.jsp" class="btn btn-primary">BACK</a>
+               <input type="button" id="submit" value="submit" class="btn btn-outline-primary"></input>
                
                
             </center>
