@@ -3,6 +3,7 @@
 
 
 <html>
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
         <title>Mini Projects</title>
