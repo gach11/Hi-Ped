@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.login.bean.LoginBean;
 import com.login.dao.ImpDao;
@@ -34,11 +35,15 @@ public class SignupServlet extends HttpServlet {
 			
 			ImpDao registerDao = new ImpDao(DBConnection.getConn());
 			boolean f = registerDao.userRegister(loginBean);
+			
+			HttpSession session = req.getSession();
 			if(f)
 			{
-				System.out.println("User Register Success");
+				session.setAttribute("succMsg", "Sign Up Successfully");
+				resp.sendRedirect("login.jsp");
 			}else {
-				System.out.println("Invalid Registration");
+				session.setAttribute("failedMsg", "Update Profile Unsuccessfully");
+				resp.sendRedirect("signup.jsp");
 			}
 			
 		}catch (Exception e) {

@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.login.util.DBConnection;
 
@@ -75,11 +76,15 @@ public class AppointmentServlet extends HttpServlet {
 				
 			int rowCount = ps.executeUpdate();
 			dispatcher = request.getRequestDispatcher("userprofile.jsp");
+			HttpSession session = request.getSession();
 			
 			if (rowCount > 0) {
-				request.setAttribute("status", "success");
+				session.setAttribute("succMsg", "Appointment Schedule Successfully");
+				response.sendRedirect("userprofile.jsp");
+				
 			} else {
-				request.setAttribute("status", "failed");
+				session.setAttribute("failedMsg", "Appointment Unsuccessfully");
+				response.sendRedirect("patient_form.jsp");
 			}
 			dispatcher.forward(request, response);
 		} catch (Exception e) {

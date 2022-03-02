@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
 <html>
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
         <title>Hi! Ped | Clinic</title>
@@ -14,7 +15,7 @@
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/content/css/style.css" />
-        
+          <link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
   
            
     </head>
@@ -64,13 +65,13 @@
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Client List</a>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
 							</li>
 							<li>
-								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
+								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
 							</li>
 							<li>
-								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-envelope" style="font-size:17px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>

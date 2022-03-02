@@ -5,7 +5,7 @@
 <html>
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="images/placeholder-titlelogo.png">
-        <title>Hi, Ped! | Clinic</title>
+        <title>Hi! Ped | Clinic</title>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +14,7 @@
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/content/css/style.css" />
-        
+           		<link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
   
            
     </head>
@@ -54,13 +54,13 @@
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="active"> 
-								<a href="#"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
+								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
 							<li>
 								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li >
-								<a href="doctor_approve_resched"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
+								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
 								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>

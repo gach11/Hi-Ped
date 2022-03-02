@@ -50,14 +50,14 @@
                     <form >
                         <div class="mb-3">
                             <label class="labels" for="inputUsername">Username</label>
-                            <input type ="text" readonly class="form-control-plaintext" name="fullname" id="inputUsername" type="text" value="${currentUser.username}">
+                            <input type ="text" readonly class="form-control-plaintext" name="username" id="inputUsername" type="text" value="${currentUser.username}">
                         </div>
                         <!-- Form Row-->
                         <div class="mb-3">
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
                                 <label class="labels" for="inputOrgName">Fullname</label>
-                                <input type ="text" readonly class="form-control-plaintext" name="username" id="inputOrgName" type="text" value="${currentUser.fullname}">
+                                <input type ="text" readonly class="form-control-plaintext" name="fullname" id="inputOrgName" type="text" value="${currentUser.fullname}">
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">

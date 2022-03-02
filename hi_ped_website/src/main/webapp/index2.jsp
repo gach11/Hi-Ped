@@ -23,7 +23,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">hi.ped.clinic@gmail.com</a>
+        <i class="bi bi-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hi.ped.clinic@gmail.com&su=&body=">hi.ped.clinic@gmail.com</a>
         <i class="bi bi-phone"></i> (02) 831-2306
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
@@ -51,7 +51,7 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li><a class="nav-link scrollto" href="#contacts">Contact Us</a></li>   
-          <li><a class="nav-link scrollto" href="index.html">Logout</a></li>            
+          <li><a class="nav-link scrollto" href="index.jsp">Logout</a></li>            
         </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -61,8 +61,7 @@
     </div>
         
   </header><!-- End Header -->
-
-  <!-- ======= Home Section ======= -->
+<!-- ======= Home Section ======= -->
   <section id="home" class="d-flex align-items-center">
     <div class="container">
       <h1>Welcome to<br> Hi! Ped Clinic</h1>
@@ -82,7 +81,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4 class="title"><a href=""> New Normal Checkup</a></h4>
-              <p class="description">It refers to care at a distance using virtual technology of any sort.</p>
+              <p class="description">To care at a distance using virtual technology of any sort.</p>
             </div>
           </div>
 
@@ -90,7 +89,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="">Request Laboratory</a></h4>
-              <p class="description">It’s similar to a doctor order, an online authorization for you to have lab testing performed.</p>
+              <p class="description">An online authorization for you to have lab testing performed.</p>
             </div>
           </div>
           
@@ -102,7 +101,7 @@
             </div>
           </div>
 
-         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
               <h4 class="title"><a href="">Safe Prescription</a></h4>
@@ -116,8 +115,8 @@
     </section><!-- End Featured Services Section -->
 
     <!-- ======= About Section ======= -->
- 		<section id="about" class="about">
-      	<div class="container" data-aos="fade-up">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>About Us</h2>
           <p>Hi! Ped with digitization in the healthcare industry at Pediatrics.
@@ -129,10 +128,10 @@
           conditions and for individuals to consume medical and healthcare needs more quickly and accurately.</p>
         </div>
 
-    	<div class="row">
-    	<div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
-     	align-items-stretch position-relative">
-    	<a href="https://youtu.be/UYjlbTnF-YE" class="glightbox play-btn mb-4"></a>
+    <div class="row">
+    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
+     align-items-stretch position-relative">
+    <a href="https://youtu.be/UYjlbTnF-YE" class="glightbox play-btn mb-4"></a>
           </div>
 
     <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
@@ -141,8 +140,8 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-heart"></i></div>
               <h4 class="title"><a href="">HEALTH IS WEALTH</a></h4>
-              <p class="description">It’s good to be wealthy, but it’s better to be healthy. Wealth is not just measured in gold and silver.
-              	It’s measured in well-being. If you are healthy, it is a kind of wealth too. </p>
+              <p class="description">Health is wealth, but its better to be healthy. Wealth is not just measured in gold and silver.
+              	Measured in well-being. If you are healthy, it is a kind of wealth too. </p>
             </div>
 
             <div class="icon-box">
@@ -151,7 +150,7 @@
               <p class="description">With just one click away, you can appoint your schedule online without any hassle.</p>
             </div>
 
-             <div class="icon-box">
+            <div class="icon-box">
               <div class="icon"><i class="bx bx-help-circle"></i></div>
               <h4 class="title"><a href="">SERVICES </a></h4>
               <p class="description">Flexible time for our services to be offer specially to your children needs.</p>
@@ -195,7 +194,7 @@
           </div>
         </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
           <div class="count-box">
             <i class="fas fa-award"></i>
             <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>

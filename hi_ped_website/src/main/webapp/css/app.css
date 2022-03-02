@@ -4,7 +4,6 @@
     --dark-second: #79788c;
     --dark-hover: #323048;
     --dark-text: #f8fbff;
-
     --light-body: #f3f8fe;
     --light-main: #fdfdfd;
     --light-second: #c3c2c8;
@@ -13,10 +12,8 @@
 
     --blue: #0000ff;
     --white: #fff;
-
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-    --font-family: cursive;
+    --font-family: "Open Sans", sans-serif;
 }
 
 .dark {
@@ -76,11 +73,13 @@ body {
 }
 
 .calendar-body {
-    padding: 10px;
+    
+    height:300px;
+    width:700px;
 }
 
 .calendar-week-day {
-    height: 50px;
+    height: 30px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-weight: 600;
@@ -100,7 +99,7 @@ body {
 }
 
 .calendar-days div {
-    width: 50px;
+    width: 100px;
     height: 50px;
     display: flex;
     align-items: center;

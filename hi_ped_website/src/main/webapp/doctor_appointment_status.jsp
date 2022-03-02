@@ -33,16 +33,14 @@ ResultSet resultSet = null;
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/content/css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/assets1/css/bootstrap.css">  
+    	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="css/assets1/css/bootstrap.css"> 
     <link rel="stylesheet" href="css/assets1/vendors/iconly/bold.css">
     <link rel="stylesheet" href="css/assets1/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="css/assets1/css/app.css">
     <link rel="shortcut icon" href="css/assets1/images/favicon.svg" type="image/x-icon">
-        
-  
-           
+       
     </head>
     <body>
     	<div class="wrapper">
@@ -54,7 +52,6 @@ ResultSet resultSet = null;
 	                <img src="css/img/logo3.png" style="height:50px"/>
 	                </div>
                 </div>
-               
 				<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
 				<ul class="nav navbar-nav navbar-right user-menu pull-right">
 					<li class="dropdown">
@@ -63,6 +60,7 @@ ResultSet resultSet = null;
 							<span class="user-img"><img class="img-circle" src="css/content/images/user.jpg" width="40" alt="Doctor">
 							<span class="status online"></span></span>
 							<span>${currentUser.fullname}</span>
+						
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="profile.html">Account Profile</a></li>
@@ -81,10 +79,10 @@ ResultSet resultSet = null;
 							<li> 
 								<a href="doctor_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Doctor's Dashboard</a><br><br>
 							</li>
-							<li  class="active">
-								<a href="doctor_appointment_resched.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
+							<li>
+								<a href="doctor_appointment_request.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
-							<li >
+							<li   class="active">
 								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
 							<li>
@@ -94,9 +92,10 @@ ResultSet resultSet = null;
 					</div>
                 </div>
             </div><br><br><br><br>
-            <!-- dashboard -->                     
-		</div>
-		   <div id="main">
+            <!-- dashboard -->
+            </div>
+            
+		    <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
@@ -106,7 +105,7 @@ ResultSet resultSet = null;
         <section class="section">
             <div class="card">
                 <div class="card-header">
-                    <h1 style="text-align:center">Appointment List</h1>
+                    <h1 style="text-align:center">Appointment Status</h1>
                 </div>
                 <div class="card-body">
                     <table class="table table-sm" id="table1">
@@ -118,7 +117,6 @@ ResultSet resultSet = null;
 							<td style="text-align:center;">Guardian</td>
 							<td style="text-align:center;">Date and Time</td>
 							<td style="text-align:center;">Status</td>
-							<td style="text-align:center;">Action</td>
                         </tr>
                     </thead>
                     <%
@@ -127,21 +125,17 @@ ResultSet resultSet = null;
 						statement=connection.createStatement();
 						String sql ="select * from appointmentselecteddata";
 						resultSet = statement.executeQuery(sql);
-						int i=0;
 						while(resultSet.next()){
 						%>
 						<tr>
-							<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
-							<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
-							<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
-							<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
-							<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
-							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
-							<td style="text-align:center;"><a href="update_status_request.jsp?patientId=<%=resultSet.getString("patientId")%>" class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true">Response</a>
-	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?patientId=<%=resultSet.getString("patientId") %>"class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true" >Delete</a>
-	                        </td>
+						<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("status") %></td>
+					
+					
 						</tr>
 						<%
 						}
@@ -154,11 +148,8 @@ ResultSet resultSet = null;
                 </div>
             </div>
         </section>
-
-  
     </div>
-		
-		
+				
 		<div class="sidebar-overlay" data-reff="#sidebar"></div>
     	<script src="css/content/js/jquery-3.2.1.min.js"></script>
     	<script src="css/content/js/bootstrap.min.js"></script>

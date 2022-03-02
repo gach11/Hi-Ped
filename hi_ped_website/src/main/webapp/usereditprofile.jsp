@@ -46,7 +46,7 @@
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                                <input type="text" class="form-control" name="fullname" id="email" value="${currentUser.fullname}" />
+                                                <input type="text" class="form-control" name="fullname" id="fullname" value="${currentUser.fullname}" />
                                             </div>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                <input type="text" class="form-control" name="email" id="username" value="${currentUser.email}" />
+                                                <input type="text" class="form-control" name="email" id="email" value="${currentUser.email}" />
                                             </div>
                                         </div>
                                     </div>

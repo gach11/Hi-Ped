@@ -23,7 +23,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">hi.ped.clinic@gmail.com</a>
+        <i class="bi bi-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hi.ped.clinic@gmail.com&su=&body=">hi.ped.clinic@gmail.com</a>
         <i class="bi bi-phone"></i> (02) 831-2306
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
@@ -86,7 +86,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4 class="title"><a href=""> New Normal Checkup</a></h4>
-              <p class="description">It refers to care at a distance using virtual technology of any sort.</p>
+              <p class="description">To care at a distance using virtual technology of any sort.</p>
             </div>
           </div>
 
@@ -94,7 +94,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="">Request Laboratory</a></h4>
-              <p class="description">It’s similar to a doctor order, an online authorization for you to have lab testing performed.</p>
+              <p class="description">An online authorization for you to have lab testing performed.</p>
             </div>
           </div>
           
@@ -145,8 +145,8 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-heart"></i></div>
               <h4 class="title"><a href="">HEALTH IS WEALTH</a></h4>
-              <p class="description">It’s good to be wealthy, but it’s better to be healthy. Wealth is not just measured in gold and silver.
-              	It’s measured in well-being. If you are healthy, it is a kind of wealth too. </p>
+              <p class="description">Health is wealth, but its better to be healthy. Wealth is not just measured in gold and silver.
+              	Measured in well-being. If you are healthy, it is a kind of wealth too. </p>
             </div>
 
             <div class="icon-box">
@@ -280,7 +280,7 @@
         <div class="section-title">
           <h2>Doctors & Health Workers</h2>
           <p>Hi! Ped health care and social assistance industry sector includes establishments that
-          provide medical care in our clinic and doctor’s offices,
+          provide medical care in our clinic and doctor��s offices,
           nursing and residential care, and social assistance in childcare services.</p>
         </div>
 

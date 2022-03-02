@@ -26,7 +26,13 @@
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
             <form action ="<%=request.getContextPath()%>/signup" class="needs-validation" novalidate method="post">
+            
+            
               <h1>Sign Up</h1>
+	              <c:if test="${not empty failedMsg}">
+	              <h6 class = "text-left text-danger">${failedMsg}</h6>
+	              <c:remove var="failedMsg" scope="session"/>
+	              </c:if>
            
               <div class="form-row">
                 <input type="text" class="form-control"  id="fullname" name="fullname" aria-describedby="emailHelp" placeholder="Full Name" required>

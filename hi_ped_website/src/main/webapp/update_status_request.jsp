@@ -69,13 +69,14 @@ while(resultSet.next()){
                 <input type="text" class="form-control"  name="guardian" id="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
             </div>
             <div class="form-row"> 
+<<<<<<< HEAD
                 <input type="text" class="form-control" name="datetime" id="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
+=======
+                <input type="text" class="form-control" name="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
+>>>>>>> branch 'master' of https://github.com/manweollie/Hi-Ped.git
             </div> 
            <div class="form-row">
-            <select name="status" class="form-control" >
-				<option value="<%=resultSet.getString("status") %>">Approved</option>
-				<option value="<%=resultSet.getString("status") %>">Reschedule</option>
-			</select>
+         		<input type="text" class="form-control" name="status"  value="<%=resultSet.getString("status") %>" placeholder="Status">
 			</div>
             <center>
                <a href="index2.jsp" class="btn btn-primary">BACK</a>

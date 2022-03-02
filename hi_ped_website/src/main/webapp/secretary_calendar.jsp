@@ -1,29 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page isELIgnored="false" %>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-<%
-String id = request.getParameter("userid");
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
-String database = "telehealth";
-String userid = "root";
-String password = "Root";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
-
 <html>
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,25 +12,15 @@ ResultSet resultSet = null;
         <link href="css/content/css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/content/css/style.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/assets1/css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
-    
-    
-    
-    <link rel="stylesheet" href="css/assets1/vendors/iconly/bold.css">
-
-    <link rel="stylesheet" href="css/assets1/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/assets1/css/app.css">
-    <link rel="shortcut icon" href="css/assets1/images/favicon.svg" type="image/x-icon">
-        
-  
-           
+        <link rel="stylesheet" href="css/content/css/style.css" />   
+    	<link rel="stylesheet" href="css/assets1/css/bootstrap.css">
+   	 	<link rel="stylesheet" href="css/app.css">	     	 
+   		<link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
+    	<link rel="stylesheet" href="css/assets1/css/app.css">
+    	<link rel="shortcut icon" href="css/assets1/images/favicon.svg" type="image/x-icon">
+                
     </head>
-    <body>
+    <body class="light">
     	<div class="wrapper">
         	<!--header-->
             <div class="header">
@@ -99,31 +65,32 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Client List</a>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
 							</li>
 							<li  class="active">
-								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
+								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
 							</li>
 							<li>
-								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-envelope" style="font-size:17px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>
                 </div>
             </div><br><br><br><br>
             <!-- dashboard -->
-            <section class="section">
-            <div class="card">
-                <div class="card-header">
+            
         </div>
-		   <div id="main">
+         <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
             </a>
         </header>
-         
-                    <div class="calendar">
+
+        <section class="section">
+            <div class="card">
+               </div></section>
+        <div class="calendar"> <h1 style="text-align:center">Calendar</h1>
         <div class="calendar-header">
             <span class="month-picker" id="month-picker">February</span>
             <div class="year-picker">
@@ -157,11 +124,16 @@ ResultSet resultSet = null;
             </div>
         </div>
         <div class="month-list"></div>
-    </div>
+    </div></div>
 
-    <script src="css/app.js"></script>
-    </div>
-    </div></section>
-    </div>
+    <script src="css/app.js"></script> 
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    	<script src="css/content/js/jquery-3.2.1.min.js"></script>
+    	<script src="css/content/js/bootstrap.min.js"></script>
+   		<script src="css/content/js/jquery.slimscroll.js"></script>
+    	<script src="css/content/plugins/morris/morris.js"></script>
+    	<script src="css/content/plugins/raphael/raphael-min.js"></script>
+    	<script src="css/content/js/app.js"></script>
+
     </body>
     </html>
