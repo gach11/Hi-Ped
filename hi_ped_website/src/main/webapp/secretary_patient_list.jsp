@@ -94,13 +94,13 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Client List</a>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
 							</li>
 							<li>
-								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a>
+								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
 							</li>
 							<li>
-								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-envelope" style="font-size:17px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>

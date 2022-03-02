@@ -85,20 +85,20 @@ ResultSet resultSet = null;
 							<li> 
 								<a href="secretary_dashboard.jsp"><i class="bi bi-journal-album" style="font-size:12px"></i> Secretary's Dashboard</a><br><br>
 							</li>
-							<li>
+							<li  class="active">
 								<a href="secretary_appointment_status_view.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Status</a><br>
 							</li>
-							<li   class="active">
+							<li>
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Client List</a>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:12px"></i> Client List</a><br>
 							</li>
 							<li>
-								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
+								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a><br>
 							</li>
 							<li>
-								<a href="send-email.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Send E-mail</a>
+								<a href="send-email.jsp"><i class="bi bi-envelope" style="font-size:12px"></i> Send E-mail</a>
 							</li>
 						</ul>
 					</div>
