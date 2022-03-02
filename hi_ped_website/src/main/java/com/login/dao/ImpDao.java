@@ -43,7 +43,7 @@ public class ImpDao implements LoginDao {
 		public LoginBean userLogin(String username, String password) {
 			LoginBean loginBean =null;
 			try {
-				String sql = "select* from users where username=? and password=? ";
+				String sql = "select * from users where username=? and password=? ";
 				PreparedStatement ps = conn.prepareStatement(sql);
 				ps.setString(1, username);
 				ps.setString(2, password);
@@ -63,8 +63,52 @@ public class ImpDao implements LoginDao {
 				e.printStackTrace();
 			}
 			return loginBean;
-	
 		}
 
+		@Override
+		public boolean validatePassword(int userId, String ps) {
+			boolean f=false;
+			try {
+				String sql = "select * from users where userId=? and password=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, userId);
+				pst.setString(2, ps);
+				
+				ResultSet rs = pst.executeQuery();
+				while(rs.next())
+				{
+					f=true;
+				}
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+			return f;
+		}
 
+		@Override
+		public boolean updateProfile(LoginBean loginBean) {
+			boolean f = false;
+			try {
+				String sql = "update users set username=?, fullname=?, email=?, password=? where userId=?";
+				PreparedStatement ps = conn.prepareStatement(sql);
+				ps.setString(1, loginBean.getUsername());
+				ps.setString(2, loginBean.getFullname());
+				ps.setString(3, loginBean.getEmail());
+				ps.setString(4, loginBean.getPassword());
+				ps.setInt(5, loginBean.getUserId());
+				
+				
+				int i = ps.executeUpdate();
+				if(i==1)
+				{
+					f=true;
+				}
+				
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+			return f;
+		}
 }

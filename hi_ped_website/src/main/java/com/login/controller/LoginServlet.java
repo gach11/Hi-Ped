@@ -33,14 +33,14 @@ public class LoginServlet extends HttpServlet {
 			String password = req.getParameter("password");
 			
 			
-			if("doctor".equals(username)&&"doctor".equals(password))
+			if("doctor".equals(username)&&"doctor".equals(password)||"Doctor".equals(username)&&"Doctor".equals(password))
 			{
 					LoginBean loginBean = new LoginBean();
 					loginBean.setFullname("Doctor");
 					session.setAttribute("currentUser", loginBean);
 					resp.sendRedirect("doctor_dashboard.jsp");
 			}
-			else if("secretary".equals(username)&&"secretary".equals(password))
+			else if("secretary".equals(username)&&"secretary".equals(password)||"Secretary".equals(username)&&"Secretary".equals(password))
 			{
 				LoginBean loginBean = new LoginBean();
 				loginBean.setFullname("Secretary");

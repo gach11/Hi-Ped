@@ -1,7 +1,7 @@
 package com.login.bean;
 
 public class AppointmentBean {
-	private int aptId;
+
 	private int userId;
 	private String ctc;
 	private String patientName;
@@ -10,22 +10,13 @@ public class AppointmentBean {
 	private int age;
 	private String gender;
 	private String address;
-	private String message;
+	private String msg;
 	private String datetime;
 	private String guardian;
 	private String relation;
-	private String status;
-	public int getAptId() {
-		return aptId;
-		
-		
-		
-		
-		
-	}
-	public void setAptId(int aptId) {
-		this.aptId = aptId;
-	}
+	
+	
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -74,11 +65,11 @@ public class AppointmentBean {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getMessage() {
-		return message;
+	public String getMsg() {
+		return msg;
 	}
-	public void setMessage(String message) {
-		this.message = message;
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 	public String getDatetime() {
 		return datetime;
@@ -98,13 +89,10 @@ public class AppointmentBean {
 	public void setRelation(String relation) {
 		this.relation = relation;
 	}
-	public String getStatus() {
-		return status;
+	@Override
+	public String toString() {
+		return "AppointmentBean [userId=" + userId + ", ctc=" + ctc + ", patientName=" + patientName + ", number="
+				+ number + ", bod=" + bod + ", age=" + age + ", gender=" + gender + ", address=" + address + ", msg="
+				+ msg + ", datetime=" + datetime + ", guardian=" + guardian + ", relation=" + relation + "]";
 	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	
-	
 }
