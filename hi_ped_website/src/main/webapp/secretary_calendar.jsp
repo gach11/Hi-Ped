@@ -55,7 +55,7 @@ ResultSet resultSet = null;
   
            
     </head>
-    <body>
+    <body class="light">
     	<div class="wrapper">
         	<!--header-->
             <div class="header">
@@ -113,18 +113,20 @@ ResultSet resultSet = null;
                 </div>
             </div><br><br><br><br>
             <!-- dashboard -->
-            <section class="section">
-            <div class="card">
-                <div class="card-header">
+            
         </div>
-		   <div id="main">
+         <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
             </a>
         </header>
-         
-                    <div class="calendar">
+
+        <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <h1 style="text-align:center">Calendar</h1></div></div></section>
+        <div class="calendar">
         <div class="calendar-header">
             <span class="month-picker" id="month-picker">February</span>
             <div class="year-picker">
@@ -158,11 +160,18 @@ ResultSet resultSet = null;
             </div>
         </div>
         <div class="month-list"></div>
-    </div>
+    </div></div>
 
     <script src="css/app.js"></script>
-    </div>
-    </div></section>
-    </div>
+
+    
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    	<script src="css/content/js/jquery-3.2.1.min.js"></script>
+    	<script src="css/content/js/bootstrap.min.js"></script>
+   		<script src="css/content/js/jquery.slimscroll.js"></script>
+    	<script src="css/content/plugins/morris/morris.js"></script>
+    	<script src="css/content/plugins/raphael/raphael-min.js"></script>
+    	<script src="css/content/js/app.js"></script>
+
     </body>
     </html>
