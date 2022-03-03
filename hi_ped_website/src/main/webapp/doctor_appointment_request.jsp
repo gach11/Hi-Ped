@@ -137,8 +137,8 @@ ResultSet resultSet = null;
 							<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
-							<td style="text-align:center;"><a href="update_status_request.jsp?appointmentId=<%=resultSet.getString("patientId")%>" class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true">Response</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<td style="text-align:center;"><a href="update_status_request.jsp?appointmentId=<%=resultSet.getString("appointmentId")%>" class="btn btn-primary btn-lg"
+	                                    role="button" aria-pressed="true">Response</a>
 	                        </td>
 						</tr>
 						<%
