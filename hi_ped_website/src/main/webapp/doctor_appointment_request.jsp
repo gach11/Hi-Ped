@@ -85,7 +85,7 @@ ResultSet resultSet = null;
 								<a href="doctor_appointment_resched.jsp"><i class="bi bi-journal-check" style="font-size:12px"></i> Appointment Request</a><br>
 							</li>
 							<li >
-								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Appointment Status</a><br>
+								<a href="doctor_appointment_status.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Approve Status</a><br>
 							</li>
 							<li>
 								<a href="doctor_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a>
