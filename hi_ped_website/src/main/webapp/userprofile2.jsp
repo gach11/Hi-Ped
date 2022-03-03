@@ -1,7 +1,20 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+ <?xml version="1.0" encoding="UTF-8" ?>
+ 
+ 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false"%>
+
+<%@ page import = "com.login.bean.LoginBean" %>
+<%@ page import = "com.login.util.DBConnection" %>
+<%@ page import = "com.login.dao.AppDaoImp" %>
+<%@ page import = "com.login.controller.LoginServlet" %>
+<%@ page import = "com.login.bean.AppointmentBean" %>
+<%@ page import = "com.login.bean.LoginBean"%>
+<%@ page import = "javax.servlet.http.HttpSession" %>
+<%@ page import = "java.util.List" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -18,6 +31,7 @@
     
     	<div class="container-xl px-4 mt-4">
     	<!-- Account page navigation-->
+    	   <input type = "hidden" value="${currentUser.userId}" name="userId">
     	<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
         <a class="nav-link" href="userprofile.jsp">User Profile</a>
         <a class="nav-link active ms-0" href="#">History Appointment</a>
@@ -26,57 +40,40 @@
    		 </nav>
    		 
    		  <hr class="mt-0 mb-4">
-		 <!-- Billing history card-->
     <div class="card mb-4">
-        <div class="card-header">Patient Form</div>
+        <div class="card-header">Appointment History</div>
         <div class="card-body p-0">
             <!-- Billing history table-->
             <div class="table-responsive table-billing-history">
                 <table class="table mb-0">
                     <thead>
                         <tr>
-                            <th class="border-gray-200" scope="col">Category</th>
                             <th class="border-gray-200" scope="col">Patient Name</th>
-                            <th class="border-gray-200" scope="col">Gender</th>
-                            <th class="border-gray-200" scope="col">Date of Birth</th>
-                            <th class="border-gray-200" scope="col">Age</th>
-                            <th class="border-gray-200" scope="col">Gender</th>
-                            <th class="border-gray-200" scope="col">Address</th>
-                            <th class="border-gray-200" scope="col">Guardian</th>
-                            <th class="border-gray-200" scope="col">Relation</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="card mb-4">
-        <div class="card-header">Appointment History</div>
-        <div class="card-body p-0">
-            <div class="table-responsive table-billing-history">
-                <table class="table mb-0">
-                    <thead>
-                        <tr>
-                            <th class="border-gray-200" scope="col">Appointment ID</th>
-                            <th class="border-gray-200" scope="col">Patient Name</th>
-                            <th class="border-gray-200" scope="col">Date and Time</th>
                             <th class="border-gray-200" scope="col">Concern</th>
+                            <th class="border-gray-200" scope="col">Date and Time</th>
                             <th class="border-gray-200" scope="col">Status</th>
-                            
                         </tr>
                     </thead>
-                    <tbody>
-                    </tbody>
+                    	<%
+						LoginBean loginBean = (LoginBean) session.getAttribute("currentUser");
+                    	AppDaoImp appDaoImp = new AppDaoImp(DBConnection.getConn());
+                    	List<AppointmentBean> blist = appDaoImp.listAppointment(loginBean.getUserId());
+                    	for (AppointmentBean b : blist){
+						%>
+						<tr>
+							<td style="text-align:center;"><%=b.getPatientName() %></td>
+							<td style="text-align:center;"><%=b.getMsg() %></td>
+							<td style="text-align:center;"><%=b.getDatetime() %></td>
+							<td style="text-align:center;"><%=b.getStatus() %></td>
+						</tr>
+						<%
+                    	}
+						%>
                 </table>
             </div>
         </div>
     </div>
   </div>
-		
-		
 		<div class="sidebar-overlay" data-reff="#sidebar"></div>
     	<script src="css/content/js/jquery-3.2.1.min.js"></script>
     	<script src="css/content/js/bootstrap.min.js"></script>

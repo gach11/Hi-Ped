@@ -31,6 +31,7 @@
 
                                 <form action="<%=request.getContextPath()%>/update" method="post">
                                 <input type = "hidden" value="${currentUser.userId}" name="userId">
+                                <input type = "hidden" value="${currentUser.username}" name="username">
 
                                     <div class="form-group">
                                          <label class="labels" for="inputUsername">Username</label>

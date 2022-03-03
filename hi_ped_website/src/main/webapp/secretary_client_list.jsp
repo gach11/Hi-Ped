@@ -97,7 +97,7 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li class="active">
-								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> User List</a><br>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
@@ -128,7 +128,7 @@ ResultSet resultSet = null;
                       <thead class="thead-dark">
                         <tr>
                             <td>ID</td>
-							<td>Client's Name</td>
+							<td>Full Name</td>
 							<td>E-mail</td>
 							<td>Username</td>
                         </tr>
@@ -137,12 +137,12 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from users where role='Client'";
+						String sql ="select * from users";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td><%=resultSet.getString("user_id") %></td>
+						<td><%=resultSet.getString("userId") %></td>
 						<td><%=resultSet.getString("fullname") %></td>
 						<td><%=resultSet.getString("email") %></td>
 						<td><%=resultSet.getString("username") %></td>

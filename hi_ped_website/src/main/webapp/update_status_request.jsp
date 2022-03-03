@@ -3,7 +3,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-String patientId = request.getParameter("patientId");
+String appointment_id = request.getParameter("appointment_id");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
 String database = "telehealth";
@@ -22,7 +22,7 @@ ResultSet resultSet = null;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select * from appointmentselecteddata where patientId="+patientId;
+String sql ="select * from appointmentselecteddata where appointment_id="+appointment_id;
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -57,7 +57,7 @@ while(resultSet.next()){
               
 
 			<div class="form-row">
-				<input type="text" class="form-control" name="patientId" id=patientId  value="<%=resultSet.getString("patientId") %>" placeholder="ID" >
+				<input type="text" class="form-control" name="patientId" id=patientId  value="<%=resultSet.getString("appointment_id") %>" placeholder="ID" >
 			</div>
             <div class="form-row">
                 <input type="text" class="form-control" name="fullname" id="fullname" value="<%=resultSet.getString("fullname") %>" placeholder="Full Name" >

@@ -14,8 +14,6 @@ public class LoginBean {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-
 	public int getUserId() {
 		return userId;
 	}

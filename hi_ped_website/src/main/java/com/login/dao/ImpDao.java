@@ -42,6 +42,7 @@ public class ImpDao implements LoginDao {
 		@Override
 		public LoginBean userLogin(String username, String password) {
 			LoginBean loginBean =null;
+			
 			try {
 				String sql = "select * from users where username=? and password=? ";
 				PreparedStatement ps = conn.prepareStatement(sql);

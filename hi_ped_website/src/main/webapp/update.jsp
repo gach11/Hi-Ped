@@ -3,7 +3,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-String patientId = request.getParameter("patientId");
+String appointment_id = request.getParameter("appointment_id");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
 String database = "telehealth";
@@ -22,7 +22,7 @@ ResultSet resultSet = null;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select * from appointmentselecteddata where patientId="+patientId;
+String sql ="select * from appointmentselecteddata where patientId="+appointment_id;
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -31,8 +31,8 @@ while(resultSet.next()){
 <body>
 <h1>Update Status</h1>
 <form method="post" action="update-process.jsp">
-<input type="hidden" name="patientId" value="<%=resultSet.getString("patientId") %>">
-<input type="text" name="patientId" value="<%=resultSet.getString("patientId") %>">
+<input type="hidden" name="patientId" value="<%=resultSet.getString("appointment_id") %>">
+<input type="text" name="patientId" value="<%=resultSet.getString("appointment_id") %>">
 <br>
 Full Name:<br>
 <input type="text" name="fullname" value="<%=resultSet.getString("fullname") %>">

@@ -1,5 +1,4 @@
 package com.login.bean;
-
 public class AppointmentBean {
 
 	private int userId;
@@ -14,9 +13,14 @@ public class AppointmentBean {
 	private String datetime;
 	private String guardian;
 	private String relation;
+	private String status;
 	
-	
-	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public int getUserId() {
 		return userId;
 	}
@@ -44,8 +48,8 @@ public class AppointmentBean {
 	public String getBod() {
 		return bod;
 	}
-	public void setBod(String bod) {
-		this.bod = bod;
+	public void setBod(String bod2) {
+		this.bod = bod2;
 	}
 	public int getAge() {
 		return age;
@@ -93,6 +97,8 @@ public class AppointmentBean {
 	public String toString() {
 		return "AppointmentBean [userId=" + userId + ", ctc=" + ctc + ", patientName=" + patientName + ", number="
 				+ number + ", bod=" + bod + ", age=" + age + ", gender=" + gender + ", address=" + address + ", msg="
-				+ msg + ", datetime=" + datetime + ", guardian=" + guardian + ", relation=" + relation + "]";
+				+ msg + ", datetime=" + datetime + ", guardian=" + guardian + ", relation=" + relation + ", status="
+				+ status + "]";
 	}
+	
 }

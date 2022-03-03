@@ -65,7 +65,7 @@
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> User List</a><br>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
