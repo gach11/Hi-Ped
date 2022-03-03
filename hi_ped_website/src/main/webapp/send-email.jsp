@@ -74,8 +74,8 @@ ResultSet resultSet = null;
 						<a href="secretary_dashboard.jsp" style="text-decoration: none;"><button
 								type="button" class="btn btn-outline-primary">BACK</button></a>
 					</form><div></div>
-					<div>
-					<a onclick="myFunction()" class="btn btn-outline-link" style="font-family:Consolas MS; font-size:10px; text-decoration:underline;">Click to paste receipt link</a></div>
+					<div class="form-check">
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" onclick="myFunction()" class="btn btn-outline-link" style="font-family:Consolas MS; font-size:15px; text-align:center;">Click to paste receipt link</a></div>
 				</div>
 				<div id="myModal" class="modal">
 
