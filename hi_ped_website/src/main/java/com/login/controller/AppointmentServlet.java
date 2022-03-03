@@ -13,7 +13,6 @@ import com.login.bean.AppointmentBean;
 import com.login.dao.AppDaoImp;
 import com.login.util.DBConnection;
 
-
 @WebServlet("/appointment")
 public class AppointmentServlet extends HttpServlet {
 
@@ -24,22 +23,22 @@ public class AppointmentServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+
 		try {
-			
+
 			int userId = Integer.parseInt(req.getParameter("userId"));
 			String ctc = req.getParameter("category");
 			String patientName = req.getParameter("name");
 			String number = req.getParameter("cnumber");
 			String bod = req.getParameter("bod");
-			int age =  Integer.parseInt(req.getParameter("age"));
+			int age = Integer.parseInt(req.getParameter("age"));
 			String gender = req.getParameter("gender");
 			String address = req.getParameter("address");
 			String concern = req.getParameter("msg");
 			String datetime = req.getParameter("datetime");
 			String guardian = req.getParameter("guardian");
 			String relation = req.getParameter("relation");
-			
+
 			AppointmentBean ab = new AppointmentBean();
 			ab.setUserId(userId);
 			ab.setCtc(ctc);
@@ -53,27 +52,24 @@ public class AppointmentServlet extends HttpServlet {
 			ab.setDatetime(datetime);
 			ab.setGuardian(guardian);
 			ab.setRelation(relation);
-			
+
 			AppDaoImp appDaoImp = new AppDaoImp(DBConnection.getConn());
-			
+
 			boolean f = appDaoImp.addPatient(ab);
-			
+
 			HttpSession session = req.getSession();
-			if(f)
-			{
+			if (f) {
 				session.setAttribute("succMsg", "Appointment Successfully");
 				resp.sendRedirect("patient_form.jsp");
-			}else {
+			} else {
 				session.setAttribute("failedMsg", "Appointment Unsuccessfully");
 				resp.sendRedirect("patient_form.jsp");
 			}
-			
-		}
-		catch(Exception e)
-		{
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

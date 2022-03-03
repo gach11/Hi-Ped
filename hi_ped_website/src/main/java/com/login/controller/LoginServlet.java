@@ -2,8 +2,6 @@ package com.login.controller;
 
 import java.io.IOException;
 
-
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,46 +23,38 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		try
-		{
+		try {
 			ImpDao impDao = new ImpDao(DBConnection.getConn());
 			HttpSession session = req.getSession();
-			
+
 			String username = req.getParameter("username");
 			String password = req.getParameter("password");
-			
-			
-			if("doctor".equals(username)&&"doctor".equals(password)||"Doctor".equals(username)&&"Doctor".equals(password))
-			{
-					LoginBean loginBean = new LoginBean();
-					loginBean.setFullname("Doctor");
-					session.setAttribute("currentUser", loginBean);
-					resp.sendRedirect("doctor_dashboard.jsp");
-			}
-			else if("secretary".equals(username)&&"secretary".equals(password)||"Secretary".equals(username)&&"Secretary".equals(password))
-			{
+
+			if ("doctor".equals(username) && "doctor".equals(password)
+					|| "Doctor".equals(username) && "Doctor".equals(password)) {
+				LoginBean loginBean = new LoginBean();
+				loginBean.setFullname("Doctor");
+				session.setAttribute("currentUser", loginBean);
+				resp.sendRedirect("doctor_dashboard.jsp");
+			} else if ("secretary".equals(username) && "secretary".equals(password)
+					|| "Secretary".equals(username) && "Secretary".equals(password)) {
 				LoginBean loginBean = new LoginBean();
 				loginBean.setFullname("Secretary");
 				session.setAttribute("currentUser", loginBean);
 				resp.sendRedirect("secretary_dashboard.jsp");
-			}
-			else
-			{
+			} else {
 				LoginBean loginBean = impDao.userLogin(username, password);
-				if(loginBean != null) {
+				if (loginBean != null) {
 					session.setAttribute("currentUser", loginBean);
 					resp.sendRedirect("index2.jsp");
-				}
-				else
-				{
+				} else {
 					session.setAttribute("failedMsg", "Username & Password Invalid");
 					resp.sendRedirect("login.jsp");
 				}
 				resp.sendRedirect("index.jsp");
 			}
-			
-		}catch (Exception e)
-		{
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
