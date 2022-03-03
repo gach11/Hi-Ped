@@ -94,7 +94,7 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> User List</a><br>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
@@ -124,13 +124,13 @@ ResultSet resultSet = null;
                     <table class="table table-sm" id="table1">
                       <thead class="thead-dark">
                         <tr>
-                            <td>ID</td>
-							<td>Category</td>
-							<td>Patient Name</td>
-							<td>Birthday</td>
-							<td>Age</td>
-							<td>Gender</td>
-							<td>Concern</td>
+                            <td style="text-align:center">ID</td>
+							<td style="text-align:center">Category</td>
+							<td style="text-align:center">Patient Name</td>
+							<td style="text-align:center">Birthday</td>
+							<td style="text-align:center">Age</td>
+							<td style="text-align:center">Gender</td>
+							<td style="text-align:center">Concern</td>
                         </tr>
                     </thead>
                     <%
@@ -142,13 +142,13 @@ ResultSet resultSet = null;
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td><%=resultSet.getString("appointment_id") %></td>
-						<td><%=resultSet.getString("category") %></td>
-						<td><%=resultSet.getString("fullname") %></td>
-						<td><%=resultSet.getString("bod") %></td>
-						<td><%=resultSet.getString("age") %></td>
-						<td><%=resultSet.getString("gender") %></td>
-						<td><%=resultSet.getString("concern") %></td>
+						<td style="text-align:center"><%=resultSet.getString("appointmentId") %></td>
+						<td style="text-align:center"><%=resultSet.getString("category") %></td>
+						<td style="text-align:center"><%=resultSet.getString("fullname") %></td>
+						<td style="text-align:center"><%=resultSet.getString("bod") %></td>
+						<td style="text-align:center"><%=resultSet.getString("age") %></td>
+						<td style="text-align:center"><%=resultSet.getString("gender") %></td>
+						<td style="text-align:center"><%=resultSet.getString("concern") %></td>
 						
 						</tr>
 						<%

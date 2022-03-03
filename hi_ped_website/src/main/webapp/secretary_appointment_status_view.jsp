@@ -92,7 +92,7 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:12px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:12px"></i> User List</a><br>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:12px"></i> Client List</a><br>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:12px"></i> Calendar</a><br>
@@ -135,12 +135,12 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from appointmentselecteddata";
+						String sql ="select * from appointmentdata";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("appointmentId") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
