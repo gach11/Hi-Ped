@@ -38,6 +38,19 @@
 
             </form>
           </div>
+          <div id="myModal" class="modal">
+
+  		 	<!-- Modal content -->
+  		 	<div class="modal-content">
+  		 	<span class="close">&times;</span>
+  		 	<div class="header">
+    	 	<p>Email Sent Successfully!</p>
+    	 	</div>
+    	 	<div class="check">
+    	 	<img src="css/images/check.png">
+    	 	</div>  	
+     	 	</div>
+          
       </div>
     </div>
     </div>
