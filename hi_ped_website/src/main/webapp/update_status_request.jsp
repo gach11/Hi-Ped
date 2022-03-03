@@ -79,7 +79,7 @@ while(resultSet.next()){
 			
             <center>
                <a href="doctor_dashboard.jsp" class="btn btn-primary">BACK</a>
-               <input type="button" id="submit" value="submit" class="btn btn-outline-primary"></input>
+               <button type="submit" class="btn btn-outline-primary" value="submit">SUBMIT</button>
                
                
             </center>
