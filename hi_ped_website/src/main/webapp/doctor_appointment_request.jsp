@@ -125,7 +125,7 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from appointmentdata";
+						String sql ="select * from appointmentdata order by appointment_id DESC";
 						resultSet = statement.executeQuery(sql);
 						int i=0;
 						while(resultSet.next()){
@@ -139,8 +139,7 @@ ResultSet resultSet = null;
 							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
 							<td style="text-align:center;"><a href="update_status_request.jsp?appointment_id=<%=resultSet.getString("appointment_id")%>" class="btn btn-primary btn-lg"
 	                                    role="button" aria-pressed="true">Response</a>
-	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?appointment_id=<%=resultSet.getString("appointment_id") %>"class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true" >Delete</a>
+
 	                        </td>
 						</tr>
 						<%

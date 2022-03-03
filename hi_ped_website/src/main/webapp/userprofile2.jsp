@@ -64,7 +64,7 @@
 							<td style="text-align:left;"><%=b.getPatientName() %></td>
 							<td style="text-align:left;"><%=b.getMsg() %></td>
 							<td style="text-align:left;"><%=b.getDatetime() %></td>
-							<td style="text-align:left;">PENDING</td>
+							<td style="text-align:left;"><%=b.getStatus() %></td>
 						</tr>
 						<%
                     	}
