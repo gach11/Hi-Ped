@@ -21,7 +21,7 @@
     	<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
         <a class="nav-link" href="userprofile.jsp">User Profile</a>
         <a class="nav-link active ms-0" href="#">History Appointment</a>
-        <a class="nav-link" href="index.jsp">Home</a>
+        <a class="nav-link" href="index2.jsp">Home</a>
         <a href="patient_form.jsp" class="appointment-btn scrollto" style="text-decoration: none"><span class="d-none d-md-inline">Make an </span>Appointment</a>
    		 </nav>
    		 
