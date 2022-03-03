@@ -32,7 +32,7 @@
               <div class="form-row">
                 <textarea rows="10" cols="5" class="form-control" name="content" style="height: 150px text-align:;" placeholder="Message" required></textarea>
               </div>              
-              <button type="submit" value="send" class="btn btn-outline-primary">SEND</button>
+              <button type="submit" value="send" class="btn btn-outline-primary" id="myBtn">SEND</button>
               <a href="secretary_dashboard.jsp" style="text-decoration:none;"><button type="button" class="btn btn-outline-primary">BACK</button></a>
               
 
@@ -62,5 +62,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="css/jss/index.js"></script>
+    <script>
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
   </body>
 </html>
