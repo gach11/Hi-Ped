@@ -131,15 +131,15 @@ ResultSet resultSet = null;
 						while(resultSet.next()){
 						%>
 						<tr>
-							<td style="text-align:center;"><%=resultSet.getString("patientId") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("appointment_id") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
-							<td style="text-align:center;"><a href="update_status_request.jsp?patientId=<%=resultSet.getString("patientId")%>" class="btn btn-primary btn-lg"
+							<td style="text-align:center;"><a href="update_status_request.jsp?patientId=<%=resultSet.getString("appointment_id")%>" class="btn btn-primary btn-lg"
 	                                    role="button" aria-pressed="true">Response</a>
-	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?patientId=<%=resultSet.getString("patientId") %>"class="btn btn-primary btn-lg"
+	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?appointment_id=<%=resultSet.getString("appointment_id") %>"class="btn btn-primary btn-lg"
 	                                    role="button" aria-pressed="true" >Delete</a>
 	                        </td>
 						</tr>

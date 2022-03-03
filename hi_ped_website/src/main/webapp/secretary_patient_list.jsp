@@ -94,7 +94,7 @@ ResultSet resultSet = null;
 								<a href="secretary_patient_list.jsp"><i class="bi bi-journal-medical" style="font-size:17px"></i> Patient List</a><br>
 							</li>
 							<li>
-								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> Client List</a><br>
+								<a href="secretary_client_list.jsp"><i class="bi bi-card-list" style="font-size:17px"></i> User List</a><br>
 							</li>
 							<li>
 								<a href="secretary_calendar.jsp"><i class="bi bi-calendar-week" style="font-size:17px"></i> Calendar</a><br>
@@ -142,13 +142,13 @@ ResultSet resultSet = null;
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td><%=resultSet.getString("patientId") %></td>
+						<td><%=resultSet.getString("appointment_id") %></td>
 						<td><%=resultSet.getString("category") %></td>
 						<td><%=resultSet.getString("fullname") %></td>
 						<td><%=resultSet.getString("bod") %></td>
 						<td><%=resultSet.getString("age") %></td>
 						<td><%=resultSet.getString("gender") %></td>
-						<td><%=resultSet.getString("message") %></td>
+						<td><%=resultSet.getString("concern") %></td>
 						
 						</tr>
 						<%

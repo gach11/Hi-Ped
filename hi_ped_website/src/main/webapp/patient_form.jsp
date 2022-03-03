@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom css -->
     <link href="css/stylesheets/Stylesheet2.css" rel="stylesheet">
-    <link href="css/patient.css" rel="stylesheet">
   </head>
 
   <body>
@@ -35,7 +34,7 @@
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
             
-            <form action = "<%=request.getContextPath()%>/appoint" class="needs-validation" novalidate method="post">
+            <form action = "<%=request.getContextPath()%>/appointment" class="needs-validation" novalidate method="post">
             <input type = "hidden" value="${currentUser.userId}" name="userId">
 			
               <h1>Patient Form</h1>
@@ -63,8 +62,6 @@
   					<label class="form-check-label" for="cat3">Adolescent</label>
 				</div>
             </div>
-              
-
 			<div class="form-row">
 				<input type="text" class="form-control"  id="patientname" name="name"  placeholder="Patient Name" required>
 			</div>
@@ -90,12 +87,12 @@
                 <input type="text" class="form-control"  id="address" name="address"  placeholder="Address" required>
             </div>            
 			<div class="form-row">								
-   				 <textarea placeholder="Condition" class="form-control" id="condition" name="msg" rows="3"  aria-describedby="emailHelp" required></textarea>
+   				 <textarea placeholder="Condition" class="form-control" id="concern" name="msg" rows="3" required></textarea>
  			</div>
             <div class="form-row"> <p id="privacyTerms" class="small_text"><a>
                Appointment Schedule</a>
               </p> 
-                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime"  min="2022-03-03T08:00" max="2022-12-31T17:00" class="form-control"required>
+                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control"required>
             </div>            
               <p id="privacyTerms" class="small_text"><a>
                 Guardian Info </a>
