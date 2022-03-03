@@ -1,7 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<?xml version="1.0" encoding="UTF-8" ?>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+
+String id = request.getParameter("userid");
+String driver = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/telehealth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
+String database = "telehealth";
+String userid = "root";
+String password = "Root";
+try {
+Class.forName(driver);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <!DOCTYPE html>
+
 <html lang="en">
 <link rel="icon" type="image/png" sizes="32x32"
 	href="css/img/favicon-32x32.png">
@@ -50,13 +73,9 @@
 							id="myBtn">SEND</button>
 						<a href="secretary_dashboard.jsp" style="text-decoration: none;"><button
 								type="button" class="btn btn-outline-primary">BACK</button></a>
-						<div>
-							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-							<button onclick="myFunction()" class="btn btn-outline-primary">RECEIPT</button>
-						</div>
-
-
-					</form>
+					</form><div></div>
+					<div>
+					<a onclick="myFunction()" class="btn btn-outline-link" style="font-family:Consolas MS; font-size:10px; text-decoration:underline;">Click to paste receipt link</a></div>
 				</div>
 				<div id="myModal" class="modal">
 
