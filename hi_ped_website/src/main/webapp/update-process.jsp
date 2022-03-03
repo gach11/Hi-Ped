@@ -52,6 +52,7 @@ out.println(sql);
 <!DOCTYPE html>
 <html>
   <head>
+  <title>Hi! Ped | Clinic</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
@@ -61,7 +62,7 @@ out.println(sql);
         padding: 40px 0;
         background: #EBF0F5;
       }
-        h1 {
+        h2 {
           color: #1977CC;
           font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
           font-weight: 900;
@@ -90,11 +91,12 @@ out.println(sql);
       }
     </style>
     <body>
+     
       <div class="card">
       <div style="border-radius:200px; height:200px; width:200px; background: #C2E2FF; margin:0 auto;">
         <i class="checkmark"><span>&#10003;</span></i>
-      </div>
-        <h1>Success</h1> 
+      </div><br>
+        <h2>Success</h2> 
         <p>Status Updated Successfully<br/></p><br>
         <a type="button" class="btn btn-light" href="doctor_appointment_request.jsp">OK</a>      
       </div>
