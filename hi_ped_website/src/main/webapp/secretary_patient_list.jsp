@@ -32,7 +32,7 @@ ResultSet resultSet = null;
         <link href="css/content/css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/content/css/style.css" />
+        <link rel="stylesheet" href="css/content/css/style2.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/assets1/css/bootstrap.css">

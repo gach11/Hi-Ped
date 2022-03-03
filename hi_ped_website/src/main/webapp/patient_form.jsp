@@ -95,7 +95,7 @@
             <div class="form-row"> <p id="privacyTerms" class="small_text"><a>
                Appointment Schedule</a>
               </p> 
-                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime" class="form-control"required>
+                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime"  min="2022-03-03T08:00" max="2022-12-31T17:00" class="form-control"required>
             </div>            
               <p id="privacyTerms" class="small_text"><a>
                 Guardian Info </a>

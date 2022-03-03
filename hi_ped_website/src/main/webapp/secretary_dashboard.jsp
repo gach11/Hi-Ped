@@ -14,7 +14,7 @@
         <link href="css/content/css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/content/plugins/morris/morris.css" rel="stylesheet" />
         <link href="css/content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/content/css/style.css" />
+        <link rel="stylesheet" href="css/content/css/style2.css" />
           <link rel="stylesheet" href="css/assets1/vendors/bootstrap-icons/bootstrap-icons.css">
   
            
