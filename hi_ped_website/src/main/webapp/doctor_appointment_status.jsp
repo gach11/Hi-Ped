@@ -123,12 +123,12 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from appointmentselecteddata";
+						String sql ="select * from appointmentdata";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
 						<tr>
-						<td style="text-align:center;"><%=resultSet.getString("appointment_id") %></td>
+						<td style="text-align:center;"><%=resultSet.getString("appointmentId") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
 						<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>

@@ -125,22 +125,20 @@ ResultSet resultSet = null;
 						try{
 						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 						statement=connection.createStatement();
-						String sql ="select * from appointmentselecteddata";
+						String sql ="select * from appointmentdata";
 						resultSet = statement.executeQuery(sql);
 						int i=0;
 						while(resultSet.next()){
 						%>
 						<tr>
-							<td style="text-align:center;"><%=resultSet.getString("appointment_id") %></td>
+							<td style="text-align:center;"><%=resultSet.getString("appointmentId") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("fullname") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("concern") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("guardian") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("datetime") %></td>
 							<td style="text-align:center;"><%=resultSet.getString("status") %></td>
-							<td style="text-align:center;"><a href="update_status_request.jsp?patientId=<%=resultSet.getString("appointment_id")%>" class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true">Response</a>
-	                                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete.jsp?appointment_id=<%=resultSet.getString("appointment_id") %>"class="btn btn-primary btn-lg"
-	                                    role="button" aria-pressed="true" >Delete</a>
+							<td style="text-align:center;"><a href="update_status_request.jsp?appointmentId=<%=resultSet.getString("patientId")%>" class="btn btn-primary btn-lg"
+	                                    role="button" aria-pressed="true">Response</a>&nbsp;&nbsp;&nbsp;&nbsp;
 	                        </td>
 						</tr>
 						<%

@@ -7,25 +7,25 @@
 <%!String user = "root";%>
 <%!String psw = "Root";%>
 <%
-String appointment_id = request.getParameter("appointment_id");
+String appointmentId = request.getParameter("appointmentId");
 String fullname=request.getParameter("fullname");
 String concern=request.getParameter("concern");
 String datetime=request.getParameter("datetime");
 String guardian=request.getParameter("guardian");
 String status=request.getParameter("status");
-if(appointment_id != null)
+if(appointmentId != null)
 {
 Connection con = null;
 PreparedStatement ps = null;
-int personID = Integer.parseInt(appointment_id);
+int personID = Integer.parseInt(appointmentId);
 
 try
 {
 Class.forName(driverName);
 con = DriverManager.getConnection(url,user,psw);
-String sql="UPDATE appointmentselecteddata set appointment_id=?,fullname=?,concern=?,datetime=?,guardian=?, status=? where patientId="+appointment_id;
+String sql="UPDATE appointmentdata set appointmentId=?,fullname=?,concern=?,datetime=?,guardian=?, status=? where appointmentId="+appointmentId;
 ps = con.prepareStatement(sql);
-ps.setString(1,appointment_id);
+ps.setString(1,appointmentId);
 ps.setString(2, fullname);
 ps.setString(3, concern);
 ps.setString(4, datetime);

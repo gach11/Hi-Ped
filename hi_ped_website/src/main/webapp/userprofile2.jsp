@@ -41,17 +41,17 @@
    		 
    		  <hr class="mt-0 mb-4">
     <div class="card mb-4">
-        <div class="card-header">Appointment History</div>
+        <div  class="card-header">Appointment History</div>
         <div class="card-body p-0">
             <!-- Billing history table-->
             <div class="table-responsive table-billing-history">
                 <table class="table mb-0">
                     <thead>
                         <tr>
-                            <th class="border-gray-200" scope="col">Patient Name</th>
-                            <th class="border-gray-200" scope="col">Concern</th>
-                            <th class="border-gray-200" scope="col">Date and Time</th>
-                            <th class="border-gray-200" scope="col">Status</th>
+                            <th style="text-align:center" class="border-gray-200" scope="col">Patient Name</th>
+                            <th style="text-align:center" class="border-gray-200" scope="col">Concern</th>
+                            <th style="text-align:center" class="border-gray-200" scope="col">Date and Time</th>
+                            <th style="text-align:center" class="border-gray-200" scope="col">Status</th>
                         </tr>
                     </thead>
                     	<%
