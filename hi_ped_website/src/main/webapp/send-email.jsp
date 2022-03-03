@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon-32x32.png">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +35,12 @@
               </div>              
               <button type="submit" value="send" class="btn btn-outline-primary" id="myBtn">SEND</button>
               <a href="secretary_dashboard.jsp" style="text-decoration:none;"><button type="button" class="btn btn-outline-primary">BACK</button></a>
+              <div>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=&body=" class="btn btn-outline-primary">PRESCRIPTION</a>
+               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=&body="
+               class="btn btn-outline-primary">RECEIPT</a>
+              </div>
               
 
             </form>
