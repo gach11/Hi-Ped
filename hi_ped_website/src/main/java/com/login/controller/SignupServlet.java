@@ -26,6 +26,7 @@ public class SignupServlet extends HttpServlet {
 			String fullname = req.getParameter("fullname");
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
+			String confirmpassword = req.getParameter("newPassword");
 
 			LoginBean loginBean = new LoginBean();
 			loginBean.setUsername(username);
@@ -37,11 +38,19 @@ public class SignupServlet extends HttpServlet {
 			boolean f = registerDao.userRegister(loginBean);
 
 			HttpSession session = req.getSession();
+			
+			if (password.equals(confirmpassword)) {
+			
 			if (f) {
 				session.setAttribute("succMsg", "Sign Up Successfully");
 				resp.sendRedirect("login.jsp");
 			} else {
-				session.setAttribute("failedMsg", "Update Profile Unsuccessfully");
+				session.setAttribute("failedMsg", "Try Again Later");
+				resp.sendRedirect("signup.jsp");
+			}
+			}
+			else {
+				session.setAttribute("failedMsg", "Password not Match, try again");
 				resp.sendRedirect("signup.jsp");
 			}
 
