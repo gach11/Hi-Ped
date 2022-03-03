@@ -27,7 +27,7 @@
     </nav>
     
     <hr class="mt-0 mb-4">
-    <div class="row">
+    <div class="row justify-content-end">
         <div class="col-xl-4">
             <!-- Profile picture card-->
             <div class="card mb-4 mb-xl-0">
@@ -40,10 +40,12 @@
                 </div>
             </div>
             
-        </div>
-        <div class="col-xl-4">
+       </div> 
+       
+        <div class="col-xl-4 w-50">
+        
             <!-- Account details card-->
-            <div class="card mb-7">
+            <div class="card mb-7" >
                 <div class="card-header">Account Details</div>
                 <div class="card-body">
                         <!-- Form Group (username)-->
@@ -68,14 +70,16 @@
                                 <label class="labels" for="currentPassword">Current Password</label>
                                 <input type ="password" readonly class="form-control-plaintext" name="password" id="currentPassword" type="password" value="${currentUser.password}">
                             </div>
+                            </div>
                         <div class="mt-5 text-center">
                         <a href="usereditprofile.jsp" class="btn btn-primary profile-button" type="submit">Edit Profile</a></div>
                         </form>
+                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 </body>
 		<script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
