@@ -63,7 +63,7 @@ ResultSet resultSet = null;
 					<li class="dropdown">
 						<a href="profile.html" class="dropdown-toggle user-link" data-toggle="dropdown" title="user-pq">
 							<!--Connected to the Database - Placeholder for now-->
-							<span class="user-img"><img class="img-circle" src="css/content/images/user.jpg" width="40" alt="Doctor">
+							<span class="user-img"><img class="img-circle" src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/nurse.png" width="40" alt="Doctor">
 							<span class="status online"></span></span>
 							<span>${currentUser.fullname}</span>
 						
