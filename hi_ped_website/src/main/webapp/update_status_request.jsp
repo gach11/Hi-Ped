@@ -57,16 +57,16 @@ while(resultSet.next()){
               
 
 			<div class="form-row">
-				<input type="text" class="form-control" name="patientId" id=patientId  value="<%=resultSet.getString("appointment_id") %>" placeholder="ID" >
+				<input type="text" class="form-control" name="appointment_id" id=appointment_id  value="<%=resultSet.getString("appointment_id") %>" placeholder="ID" readonly>
 			</div>
             <div class="form-row">
-                <input type="text" class="form-control" name="fullname" id="fullname" value="<%=resultSet.getString("fullname") %>" placeholder="Full Name" >
+                <input type="text" class="form-control" name="fullname" id="fullname" value="<%=resultSet.getString("fullname") %>" placeholder="Full Name" readonly>
             </div>                     	                       	                                                		                                               
 			<div class="form-row">								
-   				 <input type="text" class="form-control" name="concern" id="concern" value="<%=resultSet.getString("concern") %>" placeholder="Concern" >
+   				 <input type="text" class="form-control" name="concern" id="concern" value="<%=resultSet.getString("concern") %>" placeholder="Concern" readonly>
  			</div>
  			<div class="form-row">
-                <input type="text" class="form-control"  name="guardian" id="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" >
+                <input type="text" class="form-control"  name="guardian" id="guardian" value="<%=resultSet.getString("guardian") %>" placeholder="Guardian" readonly>
             </div>
             <div class="form-row"> 
                 <input type="text" class="form-control" name="datetime" id="datetime"  value="<%=resultSet.getString("datetime") %>" placeholder="Date and Time">
