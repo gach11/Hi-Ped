@@ -22,47 +22,40 @@ public class UpdateProfile extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		try
-		{
+		try {
 			int userId = Integer.parseInt(req.getParameter("userId"));
 			String username = req.getParameter("username");
 			String fullname = req.getParameter("fullname");
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
-			
+
 			LoginBean loginBean = new LoginBean();
 			loginBean.setUserId(userId);
 			loginBean.setUsername(username);
 			loginBean.setFullname(fullname);
 			loginBean.setEmail(email);
 			loginBean.setPassword(password);
-			
+
 			HttpSession session = req.getSession();
 			ImpDao impDao = new ImpDao(DBConnection.getConn());
-			
+
 			boolean f = impDao.validatePassword(userId, password);
-			if (f)
-			{
+			if (f) {
 				boolean p = impDao.updateProfile(loginBean);
-				if(p)
-				{
+				if (p) {
 					session.setAttribute("succMsg", "Update Profile Successfully");
 					resp.sendRedirect("usereditprofile.jsp");
-				}else {
+				} else {
 					session.setAttribute("failedMsg", "Update Profile Unsuccessfully");
 					resp.sendRedirect("usereditprofile.jsp");
 				}
-			}
-			else {
+			} else {
 				session.setAttribute("failedMsg", "Your Password is Incorrect");
 				resp.sendRedirect("usereditprofile.jsp");
 			}
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 
 }

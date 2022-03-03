@@ -19,38 +19,36 @@ public class SignupServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		try {
-			
+
 			String username = req.getParameter("username");
 			String fullname = req.getParameter("fullname");
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
-			
+
 			LoginBean loginBean = new LoginBean();
 			loginBean.setUsername(username);
 			loginBean.setFullname(fullname);
 			loginBean.setEmail(email);
 			loginBean.setPassword(password);
-			
+
 			ImpDao registerDao = new ImpDao(DBConnection.getConn());
 			boolean f = registerDao.userRegister(loginBean);
-			
+
 			HttpSession session = req.getSession();
-			if(f)
-			{
+			if (f) {
 				session.setAttribute("succMsg", "Sign Up Successfully");
 				resp.sendRedirect("login.jsp");
-			}else {
+			} else {
 				session.setAttribute("failedMsg", "Update Profile Unsuccessfully");
 				resp.sendRedirect("signup.jsp");
 			}
-			
-		}catch (Exception e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
-       
+
 }
