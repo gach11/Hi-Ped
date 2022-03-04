@@ -33,7 +33,7 @@
 			
         }
         .brand-section{
-           background-color: #00FFFF;
+           background-color: #7BB9F1;
            padding: 10px 40px;
         }
         .logo_sec{
