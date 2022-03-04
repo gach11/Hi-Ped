@@ -97,7 +97,7 @@ ResultSet resultSet = null;
 								Appointment Request</a><br></li>
 						<li class="active"><a href="doctor_approve_resched.jsp"><i
 								class="bi bi-journal-medical" style="font-size: 12px"></i>
-								Appointment Status</a><br></li>
+								Approve Status</a><br></li>
 						<li><a href="doctor_calendar.jsp"><i
 								class="bi bi-calendar-week" style="font-size: 12px"></i>
 								Calendar</a></li>
