@@ -204,7 +204,7 @@
 
 								<td>Name</td>
 								<td>Age</td>
-								<td>john@example.com</td>
+								<td>gender</td>
 								<td>date</td>
 							</tr>
 						</table>
