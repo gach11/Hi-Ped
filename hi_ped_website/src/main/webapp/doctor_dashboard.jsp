@@ -68,9 +68,9 @@
 						<li><a href="doctor_appointment_status.jsp"><i
 								class="bi bi-journal-medical" style="font-size: 12px"></i>
 								Appointment Status</a><br></li>
-						<li><a href="doctor_calendar.jsp"><i
+						<li><a href="form.jsp"><i
 								class="bi bi-calendar-week" style="font-size: 12px"></i>
-								Calendar</a></li>
+								Prescription</a></li>
 					</ul>
 				</div>
 			</div>
