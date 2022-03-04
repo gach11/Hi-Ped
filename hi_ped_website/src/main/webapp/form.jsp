@@ -29,6 +29,74 @@
 								</div>
 							</div>
 						</div>
+						<div class="form-group">
+							<label class="labels">Brand</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="fa fa-envelope fa" aria-hidden="true"></i></span> <input
+										type="text" class="form-control" name="brand" id="brand" />
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="input-group">
+							<label for="formGroupExampleInput">Form</label>&nbsp;&nbsp;
+							<div class="cols-sm-10">
+								<select class="form-control" name="form" id="form">
+									<option>10 mg</option>
+									<option>100 mg</option>
+									<option>500 mg</option>
+								</select>
+							</div>
+						</div>
+						<br>
+						<div class="input-group">
+							<label for="formGroupExampleInput">Frequency</label>&nbsp;&nbsp;
+							<div class="cols-sm-10">
+								<select class="form-control" name="frequency">
+									<option>Once a day</option>
+									<option>Twice a day</option>
+									<option>Thrice a day</option>
+								</select>
+							</div>
+						</div>
+						<br>
+						<div class="input-group">
+							<label for="formGroupExampleInput">Duration</label>&nbsp;&nbsp;
+							<div class="cols-sm-10">
+								<select class="form-control" name="duration">
+									<option>7 days</option>
+									<option>14 days</option>
+									<option>30 days</option>
+								</select>
+							</div>
+						</div>
+						<br>
+						<div class="input-group">
+							<label for="formGroupExampleInput">Instruction</label>&nbsp;&nbsp;
+							<div class="cols-sm-10">
+								<select class="form-control" name="instruction">
+									<option>Take with or without food</option>
+									<option>Take after breakfast</option>
+									<option>Take before midnight</option>
+								</select>
+							</div>
+						</div>
+						<br>
+
+
+						<div class="mt-5 text-center">
+							<button type="submit" class="btn btn-primary profile-button">Submit</button>
+							<a href="userprofile.jsp" class="btn btn-primary profile-button">Back</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</form>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
