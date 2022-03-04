@@ -24,7 +24,15 @@
   
  	
  	<style>
+ 	body {
+	
+}
 	.invoice-box {
+		background-image: url('css/images/bg.png');
+		background-size: 500px 400px;
+		background-position:center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 		max-width: 800px;
 		margin: auto;
 		padding: 30px;
@@ -144,7 +152,7 @@
 			var opt = 
 			{
 			  margin:       1,
-			  filename:     'pageContent_'+js.AutoCode()+'.pdf',
+			  filename:     'Prescription_'+js.AutoCode()+'.pdf',
 			  image:        { type: 'jpeg', quality: 0.98 },
 			  html2canvas:  { scale: 2 },
 			  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -184,7 +192,7 @@
 						<table>
 							<tr>
 								<td class="title">
-									<img src="css/img/logo3.png" style="width: 100%; max-width: 80px" />
+									<img src="css/images/rx.jpg" class="rx" style="width: 100%; max-width:100px;">
 								</td>
 
 							</tr>
@@ -197,15 +205,17 @@
 						<table>
 							<tr>
 								<td>
-									Hi! Ped | Clinic<br />
+									<img src="css/img/logo3.png" style="width: 20px; max-width: 20px" /> Hi! Ped | Clinic<br />
 									1956, Dela Cruz Street<br />
 									Taguig City, PH
 								</td>
 
-								<td>Name</td>
-								<td>Age</td>
-								<td>gender</td>
-								<td>date</td>
+								<td>
+								Gem Orevillo<br/>
+								10<br/>
+								Male<br/>
+								Date
+								</td>
 							</tr>
 						</table>
 					</td>
@@ -234,7 +244,7 @@
 				<tr>
 					<td></td>
 
-					<td>Dr. Emmanuel Carranza <br/>
+					<td><img src="css/ReceiptForm/signature1.png" alt="sign" width="150" height="50"><br/>Dr. Emmanuel Carranza <br/>
 					Executive Pediatrician</td>
 					
 				</tr>

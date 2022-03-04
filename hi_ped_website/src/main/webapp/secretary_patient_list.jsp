@@ -149,7 +149,7 @@ ResultSet resultSet = null;
 						while(resultSet.next()){
 						%>
 						<tr>
-							<td style="text-align: center"><%=resultSet.getString("appointmentId") %></td>
+							<td style="text-align: center"><%=resultSet.getString("appointment_id") %></td>
 							<td style="text-align: center"><%=resultSet.getString("category") %></td>
 							<td style="text-align: center"><%=resultSet.getString("fullname") %></td>
 							<td style="text-align: center"><%=resultSet.getString("bod") %></td>

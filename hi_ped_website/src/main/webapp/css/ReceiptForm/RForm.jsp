@@ -187,7 +187,7 @@
                     <div class="col-6">
                         <div class="credits" style="text-align: center">
                             <p class="text-black">Approve by: </p><br>
-                            <img src="signature.png" alt="sign" width="200" height="50">
+                            <img src="signature1.png" alt="sign" width="200" height="50">
                             <p class="text-black">Dr. Emmanuel Carranza</p>
                             <p class="text-black">Head Pediatrician</p><br>
                             </div>
